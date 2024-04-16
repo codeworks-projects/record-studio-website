@@ -1,0 +1,65 @@
+{
+  "hello": "Hello, {name}!",
+  "request": {
+    "credentialsAreWrong": "Sorry, your credentials are incorrect.",
+    "errorOccurredWhileProcessingRequest": "Sorry, an error occurred with the request. Please reload the page or contact us if the issue persists."
+  },
+  "common": {
+    "loggingOut": "Doing logout",
+    "newPassword": "New Password",
+    "change": "Change",
+    "email": "Email",
+    "password": "Password",
+    "login": "Login",
+    "forgotPassword": "Forgot password?",
+    "noResultFound": "No result found.",
+    "fromDate": "From",
+    "toDate": "To",
+    "cancel": "Cancel",
+    "continue": "Continue"
+  },
+  "login": {
+    "recoverPassword": "Recover Password",
+    "backToLogin": "Back to Login",
+    "changePassword": "Change Password",
+    "recoveryDesc": "Enter the code we sent you by email.",
+    "backToRecovery": "Back to Recovery",
+    "pleaseEnterYourEmailAndPassword": "Please enter your email and password",
+    "pleaseEnterYourEmail": "Please enter your email",
+    "pleaseEnterCodeAndNewPassword": "Please enter the code and new password",
+    "newUserSignup": "New user? Sign up"
+  },
+  "cmp": {
+    "workInProgressNotice": {
+      "featureSoon": "This feature is in development.\nStay tuned!"
+    }
+  },
+  "layouts": {
+    "title": "TODO"
+  },
+  "pg": {
+    "home": {
+      "meta": {
+        "title": "CodeWorks Frontend Boilerplate",
+        "description": "Base CodeWorks Frontend Boilerplate"
+      }
+    },
+    "privacy": {
+      "meta": {
+        "title": "Privacy Policy",
+        "description": "Privacy Policy"
+      }
+    }
+  },
+  "contacts": {
+    "companySimpleName": "MetaEsse",
+    "companyName": "MetaEsse Srl",
+    "legalStreet": "Via Leonardo Da Vinci 2/C, 39100 (BZ)",
+    "email": "info{at}metaesse.com",
+    "legalMail": "metaesse{at}pec.it",
+    "vatNumber": "IT02834950210",
+    "phone": "+39 347 14 10 249",
+    "shaCap": "100.000,00"
+  },
+  "TBD": "TODO"
+}

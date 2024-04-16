@@ -1,0 +1,54 @@
+{
+  "hello": "Ciao, {name}!",
+  "request": {
+    "credentialsAreWrong": "Spiacenti, le tue credenziali non sono corrette.",
+    "errorOccurredWhileProcessingRequest": "Spiacenti, si è verificato un errore con la richiesta. Si prega di ricaricare la pagina o contattarci se il problema persiste."
+  },
+  "common": {
+    "loggingOut": "Sto facendo il logout",
+    "newPassword": "Nuova Password",
+    "change": "Cambia",
+    "email": "Email",
+    "password": "Password",
+    "login": "Accedi",
+    "forgotPassword": "Password dimenticata?",
+    "noResultFound": "Nessun risultato trovato.",
+    "fromDate": "Da",
+    "toDate": "A",
+    "cancel": "Annulla",
+    "continue": "Continua"
+  },
+  "login": {
+    "recoverPassword": "Recupera Password",
+    "backToLogin": "Torna al Login",
+    "changePassword": "Cambia Password",
+    "recoveryDesc": "Inserisci il codice che ti abbiamo inviato via email.",
+    "backToRecovery": "Torna al Recupero",
+    "pleaseEnterYourEmailAndPassword": "Si prega di inserire la tua email e password",
+    "pleaseEnterYourEmail": "Si prega di inserire la tua email",
+    "pleaseEnterCodeAndNewPassword": "Si prega di inserire il codice e la nuova password",
+    "newUserSignup": "Nuovo utente? Registrati"
+  },
+  "cmp": {
+    "workInProgressNotice": {
+      "featureSoon": "Questa funzionalità è in sviluppo.\nResta sintonizzato!"
+    }
+  },
+  "pg": {},
+  "layouts": {
+    "title": "TODO"
+  },
+  "contacts": {
+    "companySimpleName": "MetaEsse",
+    "companyName": "MetaEsse Srl",
+    "legalStreet": "Via Leonardo Da Vinci 2/C 39100 Bolazno (IT)",
+    "email": "info{at}metaesse.com",
+    "legalMail": "metaesse{at}pec.it",
+    "vatNumber": "IT02834950210",
+    "rea": "BZ - 209676",
+    "sdi": "M5UXCR1",
+    "shaCap": "100.000,00 i. v.",
+    "copyright": ""
+  },
+  "TBD": "TODO"
+}

@@ -1,0 +1,19 @@
+{
+  "SLIDE_UP": {
+    "INITIAL": { "opacity": 0, "transform": "translateY(25px)" },
+    "IN_VIEW": { "opacity": 1, "transform": "translateY(0)" }
+  },
+  "SLIDE_RIGHT": {
+    "INITIAL": { "opacity": 0, "transform": "translateX(-25px)" },
+    "IN_VIEW": { "opacity": 1, "transform": "translateY(0)" }
+  },
+  "SCALE_UP": {
+    "INITIAL": { "opacity": 0, "transform": "scale(0.9)" },
+    "IN_VIEW": { "opacity": 1, "transform": "scale(1)" }
+  },
+  "TRANSITION": {
+    "DEFAULT": {
+      "duration": 1.2
+    }
+  }
+}
