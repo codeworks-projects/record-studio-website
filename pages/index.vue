@@ -1,139 +1,58 @@
 <template>
-  <div class="demo-ct">
-    <h1>{{ $t('hello', { name: 'developer' }) }}</h1>
-    <div class="flex">
-      <Image src="/image/example-img-to-compress.png" class="w-[50%]" />
-      <Icon name="map" class="w-[50%]" />
-    </div>
-    <TextInput label="Hello" description="This is a text input" v-model="text" />
-    <p>{{ text }}</p>
-    <TextArea label="A text area" />
-    <div>
-      <Button icon="edit" class="mr-3" />
-      <Button value="This is a button" class="mr-3" />
-      <Button value="This is a button" loading class="mr-3" />
-      <Button value="This is a button" type="secondary" />
-    </div>
-    <div>
-      <Checkbox v-model="checked" label="Check me" />
-    </div>
-    <div>
-      <Checkbox v-model="checkedSwitch" label="Check me" type="switch-on" />
-    </div>
-    <div>
-      <DateInput label="Enter a date" v-model="date" />
-      <p class="mt-1">DATE IS: {{ date }}</p>
-    </div>
-    <div>
-      <NavigationTabs
-        :items="navigationTabsItems"
-        :cur-item="curNavigationTabItem"
-        @choose="setCurNavigationTab"
-      />
-    </div>
-    <div>
-      <Modal :is-visible="modalIsVisible" @close="hideModal" />
-      <Button value="Show modal" @click="showModal" />
-    </div>
-    <div>
-      <Dialog :is-visible="dialogIsVisible" @cancel="hideDialog" @confirm="hideDialog" />
-      <Button value="Show dialog" @click="showDialog" />
-    </div>
-    <div>
-      <ListCard :data="{ id: '', name: '', isPlaceholder: true }" button-icon="edit" />
-    </div>
-    <div>
-      <Select
-        v-model="selectValue"
-        label="This is a sample select"
-        :options="[
-          { value: undefined, name: 'Select...' },
-          { value: 'one', name: 'One' },
-          { value: 'two', name: 'Two' },
-        ]"
-      />
-    </div>
-    <div>
-      <WorkInProgressNotice />
-      <WorkInProgressNotice text="I am a different text!" />
-    </div>
-    <div>
-      <Accordion title="This is an accordion">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatem ipsum molestias
-        voluptate totam delectus harum fugit. Sed eveniet architecto laborum harum provident eos qui
-        et animi quasi, iure cupiditate.
-      </Accordion>
-    </div>
-    <div>
-      <NoResultsNotice
-        icon="user"
-        :title="$t('common.noResultFound')"
-        :description="$t('common.noResultFound')"
-        :button="{ label: $t('common.change') }"
-        @buttonClick="() => ''"
-      />
-    </div>
+  <main>
+    <header>
+      <Icon name="logo" />
+    </header>
+    <article>
+      <H tag="h2" class="font-bold">{{ $t('pg.home.comingSoon') }}</H>
+      <P>{{ $t('pg.home.comingSoonDescription') }}</P>
+      <Motion
+        :initial="SLIDE_UP.INITIAL"
+        :in-view="SLIDE_UP.IN_VIEW"
+        :transition="TRANSITION.DEFAULT"
+        tag="div"
+        class="cta-ct"
+      >
+        <button
+          class="clickable"
+          @click="
+            navigateTo(`mailto:${$t('contacts.email', { at: '@' })}`, {
+              external: true,
+            })
+          "
+        >
+          {{ $t('common.contactUs') }}
+        </button>
+        <div class="social">
+          <a class="social-icon clickable" href="https://www.youtube.com/@recordstudio5140">
+            <Icon class="w-[21px] h-[14px]" name="youtube" />
+          </a>
+          <a class="social-icon clickable" href="https://www.instagram.com/record_studio_/">
+            <Icon class="w-[14px] h-[14px]" name="instagram" />
+          </a>
+          <a
+            class="social-icon clickable"
+            href="https://www.facebook.com/people/Record-Studio/100037660705926/"
+          >
+            <Icon class="w-[7px] h-[13px]" name="facebook" />
+          </a>
+          <a class="social-icon clickable" href="https://www.linkedin.com/company/recordstudio/">
+            <Icon class="w-[21px] h-[14px]" name="linkedin" />
+          </a>
+        </div>
+      </Motion>
+    </article>
 
-    <div>
-      <Pagination :current-page="0" :total-pages="10" />
-    </div>
-
-    <div>
-      <ImageInput
-        :cur-image="getTestImage(300, 300)"
-        :previewWidth="100"
-        :previewHeight="100"
-        @fileUpload="() => ''"
-      />
-    </div>
-
-    <div>
-      <RangePicker v-model:start-date="startDate" v-model:end-date="endDate" />
-      <p class="mt-1">DATE IS: {{ startDate }} / {{ endDate }}</p>
-    </div>
-
-    <div>
-      <!-- Chek expy-web-frontend for more implementations -->
-      <AutocompleteTagInput
-        placeholder="Codeworks team"
-        :options="[
-          {
-            name: 'Matteo',
-            value: 'matteo',
-          },
-          {
-            name: 'Simone',
-            value: 'simone',
-          },
-          {
-            name: 'Alessio',
-            value: 'alessio',
-          },
-          {
-            name: 'Edoardo',
-            value: 'edoardo',
-          },
-        ]"
-        :selected-tags="selectedTags"
-        is-tag-input
-        @add-tag="addTag"
-        @remove-tag="removeTag"
-      />
-    </div>
-
-    <div>
-      <H>This is an animated title</H>
-    </div>
-
-    <div>
-      <P>This is an animated paragraph</P>
-    </div>
-  </div>
+    <footer>
+      {{ $t('contacts.companyName') }} • {{ $t('contacts.legalStreet') }} •
+      {{ $t('contacts.email', { at: '@' }) }} • {{ $t('common.vat') }}
+      {{ $t('contacts.vatNumber') }}
+    </footer>
+  </main>
 </template>
 
 <script lang="ts" setup>
-import TextInput from '~/components/form/TextInput.vue'
-
+import { SLIDE_UP, TRANSITION } from '~/animations.config.json'
 const { t } = useI18n()
 
 // Head
@@ -141,77 +60,50 @@ useHead({
   title: t('contacts.companySimpleName') + ' | ' + t('pg.home.meta.title'),
   meta: [{ name: 'description', content: t('pg.home.meta.description') }],
 })
-
-const text = ref('hello :)')
-const checked = ref(true)
-const checkedSwitch = ref(false)
-const date = ref()
-const startDate = ref()
-const endDate = ref()
-
-const curNavigationTabItem = ref('one')
-const modalIsVisible = ref(false)
-const dialogIsVisible = ref(false)
-const navigationTabsItems = [
-  {
-    id: 'one',
-    name: 'One',
-  },
-  {
-    id: 'two',
-    name: 'Two',
-  },
-  {
-    id: 'three',
-    name: 'Three',
-  },
-]
-const selectValue = undefined
-const selectedTags = ref([] as Array<any>)
-
-function setCurNavigationTab(newTabId: string) {
-  curNavigationTabItem.value = newTabId
-}
-
-function showModal() {
-  modalIsVisible.value = true
-}
-
-function showDialog() {
-  dialogIsVisible.value = true
-}
-
-function hideDialog() {
-  dialogIsVisible.value = false
-}
-
-function hideModal() {
-  modalIsVisible.value = false
-}
-
-function addTag(value: any) {
-  selectedTags.value.push(value)
-}
-
-function removeTag(value: any, index: number) {
-  selectedTags.value.splice(index, 1)
-}
-
-//
-const { t } = useI18n()
-
-useHead({
-  title: t('contacts.companySimpleName') + ' | ' + t('pg.home.meta.title'),
-  meta: [{ name: 'description', content: t('pg.home.meta.description') }],
-})
 </script>
 
 <style lang="postcss" scoped>
-.demo-ct {
-  @apply flex-col justify-center space-y-8 p-5;
+main {
+  @apply h-full;
 
-  & h1 {
-    @apply font-bold font-title text-primary;
+  header {
+    @apply fixed top-0 left-0 right-0 py-10 flex items-center justify-center;
+
+    & svg {
+      @apply h-8;
+    }
+  }
+
+  article {
+    @apply w-full h-full text-white flex flex-col gap-4 items-center justify-center leading-none text-center px-10;
+
+    & h2 {
+      @apply !text-4xl;
+    }
+
+    & p {
+      @apply text-lg !max-w-[450px];
+    }
+
+    & .cta-ct {
+      @apply z-10 flex flex-col gap-5;
+
+      & button {
+        @apply bg-white text-black uppercase font-bold px-5 py-2 rounded-xl mt-10;
+      }
+
+      & .social {
+        @apply flex gap-2 justify-between;
+
+        & .social-icon {
+          @apply bg-white flex items-center justify-center text-black w-[29px] h-[29px] rounded-full;
+        }
+      }
+    }
+  }
+
+  footer {
+    @apply fixed bottom-0 left-0 right-0 py-10 flex items-center justify-center text-grey font-medium text-xs mx-10 text-center;
   }
 }
 </style>

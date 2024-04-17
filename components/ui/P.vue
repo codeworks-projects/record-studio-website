@@ -1,14 +1,16 @@
 <template>
   <Motion
     tag="p"
-    :initial="animated ? SLIDE_UP.INITIAL : undefined"
-    :in-view="animated ? SLIDE_UP.IN_VIEW : undefined"
-    :transition="animated ? TRANSITION.DEFAULT : undefined"
+    :initial="SLIDE_UP.INITIAL"
+    :in-view="SLIDE_UP.IN_VIEW"
+    :transition="TRANSITION.DEFAULT"
     class="paragraph"
     :class="{
       paragraph: true,
-      uppercase,
-      [`is-${size}`]: size,
+      'is-sm': size === 'small',
+      'is-lg': size === 'large',
+      'is-xl': size === 'extra-large',
+      'is-2-xl': size === 'double-extra-large',
     }"
   >
     <slot />
@@ -19,46 +21,44 @@
 import { SLIDE_UP, TRANSITION } from '~/animations.config.json'
 
 type Props = {
-  size?: 'small' | 'large' | 'x-large' | '2x-large'
-  uppercase?: boolean
-  animated?: boolean
+  size?: undefined | 'small' | 'large' | 'extra-large' | 'double-extra-large'
 }
 
 withDefaults(defineProps<Props>(), {
-  animated: true
+  size: undefined,
 })
 </script>
 
 <style lang="postcss" scoped>
 .paragraph {
-  @apply text-base whitespace-pre-line max-w-[850px] leading-relaxed;
+  @apply whitespace-pre-line max-w-[850px] leading-relaxed;
 
-  &.is-small {
+  &.is-sm {
     @apply text-sm;
   }
 
-  &.is-large {
+  &.is-lg {
     @apply text-lg;
   }
 
-  &.is-x-large {
+  &.is-xl {
     @apply text-xl;
   }
 
-  &.is-2x-large {
+  &.is-2-xl {
     @apply text-2xl;
   }
 }
 
-/* @media only screen and (max-width: 980px) {
+@media only screen and (max-width: 980px) {
   .paragraph {
-    &.is-extra-large {
+    &.is-xl {
       @apply text-lg;
     }
 
-    &.is-double-extra-large {
+    &.is-2-xl {
       @apply text-xl;
     }
   }
-} */
+}
 </style>

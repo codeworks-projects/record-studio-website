@@ -4,18 +4,11 @@ import { AVAILABLE_LOCALES, DEFAULT_LOCALE } from './i18n/config'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxtjs/apollo',
-    '@nuxt/image-edge',
-    '@nuxtjs/i18n',
-    '@vueuse/nuxt',
-    '@formkit/auto-animate/nuxt',
-    '@nuxt/image',
-    '@oku-ui/motion-nuxt',
-  ],
-  // devtools: {
-  //   enabled: true,
-  // },
+  modules: ['@nuxt/image-edge', '@nuxtjs/i18n', '@oku-ui/motion-nuxt'],
+  devtools: {
+    enabled: false,
+  },
+
   app: {
     head: {
       meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
@@ -26,13 +19,8 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com',
         },
         {
-          rel: 'preconnect',
-          href: 'https://fonts.gstatic.com',
-          crossorigin: '',
-        },
-        {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Hind:wght@300;400;500;600;700&display=swap',
+          href: 'https://fonts.googleapis.com/css2?family=Figtree:wght@100;200;300;400;500;600;700;800;900',
         },
       ],
       noscript: [{ children: 'Javascript is required' }],
@@ -60,27 +48,35 @@ export default defineNuxtConfig({
     },
   ],
 
-  apollo: {
-    clients: {
-      default: {
-        httpEndpoint: process.env.NUXT_PUBLIC_GRAPHQL_HTTP_ENDPOINT || '',
-        browserHttpEndpoint:
-          process.env.NUXT_PUBLIC_IS_DEV == 'true'
-            ? '/api'
-            : process.env.NUXT_PUBLIC_GRAPHQL_BROWSER_HTTP_ENDPOINT,
-        httpLinkOptions: {
-          fetchOptions: {
-            mode: 'cors', //Cors Needed for external Cross origins, need to allow headers from server
-          },
-          credentials: 'include', //must be omit to support application/json content type
-        },
-      },
-    },
-  },
-
-  runtimeConfig: {
-    public: {
-      NUXT_PUBLIC_DOMAIN_URL: process.env.NUXT_PUBLIC_DOMAIN_URL,
+  hooks: {
+    'webpack:config': (configs) => {
+      configs.forEach((config) => {
+        const svgRule = config.module.rules.find(
+          (rule: { test: { test: (arg0: string) => any } }) => rule.test.test('.svg')
+        )
+        svgRule.test = /\.(png|jpe?g|gif|webp)$/
+        config.module.rules.push({
+          test: /\.svg$/,
+          oneOf: [
+            {
+              resourceQuery: /inline/,
+              loader: 'file-loader',
+              query: {
+                name: 'static/image/[name].[hash:8].[ext]',
+              },
+            },
+            {
+              loader: 'vue-svg-loader',
+              options: {
+                // Optional svgo options
+                svgo: {
+                  plugins: [{ removeViewBox: false }],
+                },
+              },
+            },
+          ],
+        })
+      })
     },
   },
 
@@ -96,18 +92,7 @@ export default defineNuxtConfig({
     defaultLocale: DEFAULT_LOCALE,
     strategy: 'prefix_except_default',
     vueI18n: './i18n/define.config.ts',
-  },
-
-  nitro: {
-    devProxy: {
-      '/api': {
-        target: process.env.NUXT_PUBLIC_GRAPHQL_BROWSER_HTTP_ENDPOINT,
-        changeOrigin: true,
-        ignorePath: true,
-        cookieDomainRewrite: 'localhost', // Set the cookie domain to localhost
-        followRedirects: true,
-      },
-    },
+    baseUrl: process.env.DOMAIN_URL,
   },
 
   vite: {
@@ -116,11 +101,11 @@ export default defineNuxtConfig({
         defineModel: true,
       },
     },
-    plugins: [svgLoader({ svgoConfig: { plugins: ['prefixIds'] } })],
-  },
-
-  build: {
-    transpile: ['tslib'],
+    plugins: [
+      svgLoader({
+        /* NOTE: add here optional config */
+      }),
+    ],
   },
 
   telemetry: false,

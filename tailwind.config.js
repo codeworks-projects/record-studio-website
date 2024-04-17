@@ -10,7 +10,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#07418C',
+        primary: '#B22E83',
+        'primary-dark': '#823F95',
         'primary-light': '#c6e1ff',
         'primary-hover': '#0852ad',
         secondary: '#F5F5F5',
@@ -32,7 +33,7 @@ module.exports = {
       },
       fontFamily: {
         title: ['Space Grotesk', 'sans-serif'],
-        sans: ['Inter Tight', 'sans-serif'],
+        sans: ['Figtree', 'sans-serif'],
       },
       opacity: {
         disabled: 0.6,
