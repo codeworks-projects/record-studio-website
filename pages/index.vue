@@ -7,16 +7,13 @@
       <h1 class="font-bold">{{ $t('pg.home.comingSoon') }}</h1>
       <p>{{ $t('pg.home.comingSoonDescription') }}</p>
       <div class="cta-ct">
-        <button
-          class="clickable"
-          @click="
-            navigateTo(`mailto:${$t('contacts.email', { at: '@' })}`, {
-              external: true,
-            })
-          "
+        <a
+          class="button clickable"
+          href="https://www.youtube.com/watch?v=0ylLfkfOhGI"
+          target="_blank"
         >
-          {{ $t('common.contactUs') }}
-        </button>
+          {{ $t('common.seeOurPresentation') }}
+        </a>
         <div class="social">
           <a
             class="social-icon clickable"
@@ -99,7 +96,7 @@ main {
     & .cta-ct {
       @apply z-10 flex flex-col gap-5;
 
-      & button {
+      & .button {
         @apply bg-white text-black uppercase font-bold px-5 py-2 rounded-xl mt-5;
       }
 
