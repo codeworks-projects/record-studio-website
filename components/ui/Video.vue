@@ -12,6 +12,7 @@
       preload="metadata"
       playsinline
     />
+    <div class="overlay" />
   </div>
 </template>
 
@@ -56,6 +57,10 @@ const playing = ref(false)
   & svg {
     @apply relative h-16 w-16 z-[1]
     fill-light-grey opacity-90 cursor-pointer;
+  }
+
+  & .overlay {
+    @apply absolute w-full h-full bg-black opacity-40;
   }
 }
 </style>

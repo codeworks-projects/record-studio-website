@@ -4,15 +4,9 @@
       <Icon name="logo" />
     </header>
     <article>
-      <H tag="h2" class="font-bold">{{ $t('pg.home.comingSoon') }}</H>
-      <P>{{ $t('pg.home.comingSoonDescription') }}</P>
-      <Motion
-        :initial="SLIDE_UP.INITIAL"
-        :in-view="SLIDE_UP.IN_VIEW"
-        :transition="TRANSITION.DEFAULT"
-        tag="div"
-        class="cta-ct"
-      >
+      <h1 class="font-bold">{{ $t('pg.home.comingSoon') }}</h1>
+      <p>{{ $t('pg.home.comingSoonDescription') }}</p>
+      <div class="cta-ct">
         <button
           class="clickable"
           @click="
@@ -24,23 +18,40 @@
           {{ $t('common.contactUs') }}
         </button>
         <div class="social">
-          <a class="social-icon clickable" href="https://www.youtube.com/@recordstudio5140">
+          <a
+            class="social-icon clickable"
+            href="https://www.youtube.com/@recordstudio5140"
+            target="_blank"
+            title="Record Studio | YouTube"
+          >
             <Icon class="w-[21px] h-[14px]" name="youtube" />
           </a>
-          <a class="social-icon clickable" href="https://www.instagram.com/record_studio_/">
+          <a
+            class="social-icon clickable"
+            href="https://www.instagram.com/record_studio_/"
+            target="_blank"
+            title="Record Studio | Instagram"
+          >
             <Icon class="w-[14px] h-[14px]" name="instagram" />
           </a>
           <a
             class="social-icon clickable"
             href="https://www.facebook.com/people/Record-Studio/100037660705926/"
+            target="_blank"
+            title="Record Studio | Facebook"
           >
             <Icon class="w-[7px] h-[13px]" name="facebook" />
           </a>
-          <a class="social-icon clickable" href="https://www.linkedin.com/company/recordstudio/">
+          <a
+            class="social-icon clickable"
+            href="https://www.linkedin.com/company/recordstudio/"
+            target="_blank"
+            title="Record Studio | Linkedin"
+          >
             <Icon class="w-[21px] h-[14px]" name="linkedin" />
           </a>
         </div>
-      </Motion>
+      </div>
     </article>
 
     <footer>
@@ -77,19 +88,19 @@ main {
   article {
     @apply w-full h-full text-white flex flex-col gap-4 items-center justify-center leading-none text-center px-10;
 
-    & h2 {
-      @apply !text-4xl;
+    & h1 {
+      @apply relative !text-5xl !max-w-[650px];
     }
 
     & p {
-      @apply text-lg !max-w-[450px];
+      @apply relative text-lg !max-w-[450px] !leading-snug;
     }
 
     & .cta-ct {
       @apply z-10 flex flex-col gap-5;
 
       & button {
-        @apply bg-white text-black uppercase font-bold px-5 py-2 rounded-xl mt-10;
+        @apply bg-white text-black uppercase font-bold px-5 py-2 rounded-xl mt-5;
       }
 
       & .social {
@@ -103,7 +114,21 @@ main {
   }
 
   footer {
-    @apply fixed bottom-0 left-0 right-0 py-10 flex items-center justify-center text-grey font-medium text-xs mx-10 text-center;
+    @apply fixed bottom-0 left-0 right-0 py-10 flex items-center justify-center text-white font-medium text-xs mx-10 text-center;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  main {
+    article {
+      & h1 {
+        @apply !text-2xl font-black;
+      }
+
+      & p {
+        @apply text-xs;
+      }
+    }
   }
 }
 </style>
