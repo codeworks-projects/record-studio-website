@@ -114,7 +114,7 @@ main {
   }
 
   footer {
-    @apply fixed bottom-0 left-0 right-0 py-10 flex items-center justify-center text-white font-medium text-xs mx-10 text-center;
+    @apply fixed bottom-0 left-0 right-0 py-10 text-white font-medium text-xs mx-10 text-center;
   }
 }
 
@@ -122,12 +122,16 @@ main {
   main {
     article {
       & h1 {
-        @apply !text-2xl font-black;
+        @apply !text-[1.65rem] font-black;
       }
 
       & p {
         @apply text-xs;
       }
+    }
+
+    footer {
+      @apply text-[0.7rem];
     }
   }
 }
