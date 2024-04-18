@@ -1,0 +1,28 @@
+{
+  "common": {
+    "vat": "VAT",
+    "contactUs": "Contact Us",
+    "seeOurPresentation": "See our presentation"
+  },
+  "pg": {
+    "home": {
+      "meta": {
+        "title": "Designing, Capturing, and Telling Emotions.",
+        "description": "Record Studio Srl is born to design, capture, and tell emotions."
+      },
+      "comingSoon": "We design, capture, and tell emotions.",
+      "comingSoonDescription": "We are a studio where quality and creativity are the foundation of innovation and experimentation: dynamic, youthful, and clean photography."
+    }
+  },
+  "layouts": {
+    "title": ""
+  },
+  "contacts": {
+    "companySimpleName": "Record Studio",
+    "companyName": "Record Studio Srl",
+    "legalStreet": "Via Tullio Piccinini 35, 31033 Castelfranco Veneto, TV",
+    "email": "info{at}recordstudio.it",
+    "vatNumber": "03150280216"
+  },
+  "TBD": "Todo"
+}
