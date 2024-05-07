@@ -9,9 +9,7 @@
     "postinstall": "nuxt prepare",
     "test:ci": "echo no test",
     "release": "standard-version",
-    "release-development": "bash ./script/release-development.sh",
-    "release-stage": "bash ./script/release-stage.sh",
-    "release-production": "bash ./script/release-stage.sh && bash ./script/release-production.sh"
+    "release-production": "bash ./script/release-production.sh"
   },
   "devDependencies": {
     "@nuxt/image-edge": "^1.0.0-27827328.bc9ddc0",
