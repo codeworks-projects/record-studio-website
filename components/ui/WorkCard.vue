@@ -44,7 +44,7 @@ const props = withDefaults(defineProps<Props>(), {})
     }
 
     & .video-subtitle {
-      @apply text-dark-opacity normal-case;
+      @apply text-dark-opacity normal-case pt-2;
     }
   }
 }

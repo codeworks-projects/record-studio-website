@@ -94,7 +94,7 @@ const localePath = useLocalePath()
 
 <style lang="postcss" scoped>
 .footer {
-  @apply flex flex-col gap-3 font-medium pb-5 pt-56;
+  @apply flex flex-col gap-3 font-medium pb-10 pt-24;
 
   & .footer-line {
     @apply h-[1px] bg-dark-opacity mb-10 rounded-full;
@@ -108,7 +108,7 @@ const localePath = useLocalePath()
     @apply flex justify-between;
 
     & .footer-info {
-      @apply flex flex-col gap-5 max-w-[250px] text-white text-base;
+      @apply flex flex-col gap-3 mt-3 max-w-[250px] text-white text-base;
 
       & .info {
         @apply flex flex-col;
@@ -129,7 +129,7 @@ const localePath = useLocalePath()
   }
 
   & .copyright-ct {
-    @apply text-white text-sm pt-10 self-end;
+    @apply text-white text-sm self-end;
   }
 }
 
@@ -148,6 +148,8 @@ const localePath = useLocalePath()
         @apply gap-1 max-w-none text-sm;
 
         & .info {
+          @apply max-w-[250px];
+
           &.social-info {
             @apply flex-row;
           }

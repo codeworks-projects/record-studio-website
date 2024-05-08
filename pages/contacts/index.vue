@@ -82,6 +82,8 @@ useHead({
 
 @media only screen and (max-width: 980px) {
   .main {
+    @apply pt-32;
+
     & .contacts-section {
       & .contacts-ct {
         & .contacts-row {

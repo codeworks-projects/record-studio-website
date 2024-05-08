@@ -52,8 +52,11 @@ const works = computed(() => (wd.value as any)?.data as Work[])
 
 @media only screen and (max-width: 980px) {
   .main {
+    @apply pt-32;
+
     & .work-section {
       @apply -space-y-2;
+
       & .work-carousel {
         @apply grid grid-cols-2;
       }
