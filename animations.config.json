@@ -11,6 +11,10 @@
     "INITIAL": { "opacity": 0, "transform": "scale(0.9)" },
     "IN_VIEW": { "opacity": 1, "transform": "scale(1)" }
   },
+  "OPACITY": {
+    "INITIAL": { "opacity": 0 },
+    "IN_VIEW": { "opacity": 1 }
+  },
   "TRANSITION": {
     "DEFAULT": {
       "duration": 1.2

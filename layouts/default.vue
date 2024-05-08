@@ -10,11 +10,10 @@
       </template>
     </Head>
     <Body>
-      <div class="relative h-screen bg-black">
-        <Video
-          videoUrl="https://codeworks-clients-public.s3.eu-west-1.amazonaws.com/recordstudio/video/home.mp4"
-        />
+      <div class="relative bg-black min-h-screen overflow-x-hidden">
+        <Header />
         <slot />
+        <Footer />
       </div>
     </Body>
   </Html>
