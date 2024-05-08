@@ -4,8 +4,7 @@
 
 /* Foundation */
 html {
-  @apply font-sans;
-
+  @apply font-sans scroll-smooth;
   font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -72,6 +71,13 @@ img {
 
 ._disabled {
   @apply pointer-events-none opacity-disabled;
+}
+
+.parser-italic-custom {
+  @apply italic font-subtitle normal-case;
+
+  font-size: min(7.2vw, 80px);
+  line-height: min(6.2vw, 70px);
 }
 
 @keyframes slide-in {

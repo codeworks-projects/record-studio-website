@@ -1,15 +1,12 @@
 <template>
   <Motion
     :tag="tag"
-    :initial="SLIDE_UP.INITIAL"
-    :in-view="SLIDE_UP.IN_VIEW"
-    :transition="TRANSITION.DEFAULT"
+    :initial="animated ? SLIDE_UP.INITIAL : undefined"
+    :in-view="animated ? SLIDE_UP.IN_VIEW : undefined"
+    :transition="animated ? TRANSITION.DEFAULT : undefined"
     :class="{
       title: true,
-      'is-lg': size === 'large',
-      'is-xl': size === 'extra-large',
-      'is-2xl': size === 'double-extra-large',
-      uppercase,
+      [`is-${tag}`]: tag,
     }"
   >
     <slot />
@@ -21,46 +18,60 @@ import { SLIDE_UP, TRANSITION } from '~/animations.config.json'
 
 type Props = {
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
-  size?: undefined | 'large' | 'extra-large' | 'double-extra-large'
-  uppercase?: boolean
+  animated?: boolean
 }
 
 withDefaults(defineProps<Props>(), {
   tag: 'h2',
-  size: undefined,
-  uppercase: false,
+  animated: true,
 })
 </script>
 
 <style lang="postcss" scoped>
 .title {
-  @apply text-2xl whitespace-pre-line max-w-[550px] font-title;
+  @apply font-title text-white max-w-[850px] font-bold;
 
-  &.is-lg {
-    @apply text-3xl;
+  &.is-h1 {
+    @apply text-[90px];
   }
 
-  &.is-xl {
-    @apply text-4xl;
+  &.is-h2 {
+    @apply text-[60px];
   }
 
-  &.is-2xl {
-    @apply text-5xl;
+  &.is-h3 {
+    @apply text-[40px];
+  }
+
+  &.is-h4 {
+    @apply text-[24px];
+  }
+
+  &.is-h5 {
+    @apply text-[16px];
   }
 }
 
 @media only screen and (max-width: 980px) {
   .title {
-    &.is-lg {
-      @apply text-xl;
+    &.is-h1 {
+      @apply text-[60px];
     }
 
-    &.is-xl {
-      @apply text-3xl;
+    &.is-h2 {
+      @apply text-[40px];
     }
 
-    &.is-2xl {
-      @apply text-4xl;
+    &.is-h3 {
+      @apply text-[30px];
+    }
+
+    &.is-h4 {
+      @apply text-[18px];
+    }
+
+    &.is-h5 {
+      @apply text-[16px];
     }
   }
 }

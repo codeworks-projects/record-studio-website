@@ -27,13 +27,20 @@ module.exports = {
         black: '#000000',
         white: '#FFFFFF',
         'white-contrast': '#F8F8F8',
+
+        'dark-opacity': '#DADADA70',
+        'blue-card': '#016BDC',
+        'red-card': '#C74F4E',
+        'orange-card': '#E06C3E',
+        'light-blue-card': '#337993',
       },
       height: {
         input: '40px',
       },
       fontFamily: {
-        title: ['Space Grotesk', 'sans-serif'],
-        sans: ['Figtree', 'sans-serif'],
+        title: ['Thicccboi', 'sans-serif'],
+        subtitle: ['Playfair Display', 'sans-serif'],
+        sans: ['Thicccboi', 'sans-serif'],
       },
       opacity: {
         disabled: 0.6,

@@ -6,13 +6,12 @@
       :src="videoUrl"
       :poster="imageUrl"
       :autoplay="autoplay"
-      :muted="autoplay"
+      :muted="muted"
       :loop="autoplay"
       :controls="!autoplay && playing"
       preload="metadata"
       playsinline
     />
-    <div class="overlay" />
   </div>
 </template>
 
@@ -22,11 +21,13 @@ withDefaults(
     videoUrl?: string
     imageUrl?: string
     autoplay?: boolean
+    muted?: boolean
   }>(),
   {
     videoUrl: undefined,
     imageUrl: undefined,
-    autoplay: true,
+    autoplay: false,
+    muted: true,
   }
 )
 
@@ -43,11 +44,13 @@ const playing = ref(false)
 
 <style lang="postcss" scoped>
 .video-ct {
-  @apply absolute top-0 bottom-0 left-0 right-0;
+  @apply bg-cover bg-black
+  relative aspect-video w-full overflow-hidden
+  flex items-center justify-center;
 
   & video,
   & img {
-    @apply absolute w-full h-full object-cover;
+    @apply absolute w-full h-full top-0;
   }
 
   & img {
@@ -57,10 +60,6 @@ const playing = ref(false)
   & svg {
     @apply relative h-16 w-16 z-[1]
     fill-light-grey opacity-90 cursor-pointer;
-  }
-
-  & .overlay {
-    @apply absolute w-full h-full bg-black opacity-40;
   }
 }
 </style>
