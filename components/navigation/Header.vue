@@ -145,16 +145,19 @@ const menu = [
       }
 
       & .menu {
-        @apply fixed opacity-0 top-0 left-0 right-0 bottom-0 z-30 p-10 pt-40 pr-5 bg-black/90;
-        @apply flex-col pointer-events-none transition-all items-end;
+        @apply fixed opacity-0 top-0 left-0 right-0 bottom-0 z-30 p-10 pt-28 pr-5 bg-black/90 flex-col pointer-events-none transition-all duration-500 items-end;
 
         & .menu-item {
+          @apply text-2xl;
+
           &.menu-hover {
             @apply opacity-100;
           }
         }
 
         & .header-btn {
+          @apply mt-3;
+
           &.menu-hover {
             @apply opacity-100;
           }

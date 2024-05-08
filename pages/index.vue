@@ -259,14 +259,14 @@ onMounted(() => {
   }
 
   & .collaborations-section {
-    @apply flex flex-col items-center py-36;
+    @apply flex flex-col items-center pt-24;
 
     & .collaborations-section-title {
-      @apply uppercase text-center;
+      @apply uppercase text-center mb-5;
     }
 
     & .partners-ct {
-      @apply grid grid-cols-7 gap-3 pt-24;
+      @apply grid grid-cols-7 gap-3 pt-5;
 
       & .partner-image {
         @apply w-[130px] h-[50px] object-contain;
