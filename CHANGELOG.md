@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.1.1...v1.2.0) (2024-05-09)
+
+
+### Features
+
+* applied minor layout optimizations ([c4e1ab9](https://github.com/codeworks-projects/record-studio-website/commit/c4e1ab90972455fc1118104a5bc0b2073ef7d20b))
+* first release website ([5409a71](https://github.com/codeworks-projects/record-studio-website/commit/5409a710b697aa02cc9e10e92ed172dc40790b34))
+
 ### [1.1.1](https://github.com/codeworks-projects/record-studio-website/compare/v1.1.0...v1.1.1) (2024-05-07)
 
 ## 1.1.0 (2024-05-07)
