@@ -173,7 +173,7 @@ const menu = [
 
 @media only screen and (min-width: 1300px) {
   .header {
-    @apply px-20;
+    @apply px-12;
   }
 }
 </style>

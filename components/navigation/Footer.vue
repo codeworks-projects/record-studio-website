@@ -165,7 +165,7 @@ const localePath = useLocalePath()
 
 @media only screen and (min-width: 1300px) {
   .footer {
-    @apply px-20;
+    @apply px-12;
   }
 }
 </style>
