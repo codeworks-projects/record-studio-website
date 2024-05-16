@@ -1,5 +1,55 @@
 import type { StrapiMedia } from './common'
 
+type ImageComponent = {
+  __component: 'work-dynamic.image'
+  imageContent?: StrapiMedia
+}
+type ImageGrid1x3Component = {
+  __component: 'work-dynamic.image-grid1x3'
+  imageGrid1x3_Row1Col1?: StrapiMedia
+  imageGrid1x3_Row1Col2?: StrapiMedia
+  imageGrid1x3_Row1Col3?: StrapiMedia
+}
+type ImageGrid2x1Component = {
+  __component: 'work-dynamic.image-grid2x1'
+  imageGrid2x1_Row1Col1?: StrapiMedia
+  imageGrid2x1_Row2Col1?: StrapiMedia
+}
+type ImageGrid2x2Component = {
+  __component: 'work-dynamic.image-grid2x2'
+  imageGrid2x2_Row1Col1?: StrapiMedia
+  imageGrid2x2_Row1Col2?: StrapiMedia
+  imageGrid2x2_Row2Col1?: StrapiMedia
+  imageGrid2x2_Row2Col2?: StrapiMedia
+}
+type TextComponent = {
+  __component: 'work-dynamic.text'
+  textContent?: string
+}
+type VideoComponent = {
+  __component: 'work-dynamic.video'
+  videoContent?: StrapiMedia
+  videoUrl?: string
+}
+type VimeoComponent = {
+  __component: 'work-dynamic.vimeo'
+  vimeoID?: string
+}
+type YoutubeComponent = {
+  __component: 'work-dynamic.youtube'
+  youtubeID?: string
+}
+
+type DynamicComponent =
+  | ImageComponent
+  | ImageGrid1x3Component
+  | ImageGrid2x1Component
+  | ImageGrid2x2Component
+  | TextComponent
+  | VideoComponent
+  | VimeoComponent
+  | YoutubeComponent
+
 export type Work =
   | {
       id: string
@@ -11,22 +61,8 @@ export type Work =
         copy?: string
         location?: string
         previewVideo?: StrapiMedia
-        dynamic?:
-          | (
-              | {
-                  __component: 'work-dynamic.text'
-                  textContent?: string
-                }
-              | {
-                  __component: 'work-dynamic.video'
-                  videoContent?: StrapiMedia
-                }
-              | {
-                  __component: 'work-dynamic.image'
-                  imageContent?: StrapiMedia
-                }
-            )[]
-          | []
+        link?: string
+        dynamic?: DynamicComponent[] | []
         title?: string
         type?:
           | 'product'

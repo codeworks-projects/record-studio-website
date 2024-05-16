@@ -18,7 +18,8 @@
     "phone": "Phone",
     "language": "Language",
     "italian": "Italiano",
-    "english": "Inglese"
+    "english": "Inglese",
+    "noVideo": "Video not available"
   },
   "pg": {
     "home": {

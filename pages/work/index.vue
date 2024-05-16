@@ -1,6 +1,6 @@
 <template>
   <main class="main">
-    <section id="work" class="work-section center">
+    <section id="work" class="work-section">
       <H tag="h1" class="work-title">{{ $t('pg.work.title') }}</H>
       <div class="work-carousel">
         <Motion
@@ -8,7 +8,7 @@
           tag="div"
           :initial="OPACITY.INITIAL"
           :in-view="OPACITY.IN_VIEW"
-          :transition="{ ...TRANSITION.DEFAULT, delay: i / works.length }"
+          :transition="{ ...TRANSITION.DEFAULT }"
         >
           <WorkCard :work="work" />
         </Motion>
@@ -38,7 +38,7 @@ const works = computed(() => (wd.value as any)?.data as Work[])
   @apply pt-56;
 
   & .work-section {
-    @apply -space-y-4;
+    @apply -space-y-4 px-5;
 
     & .work-title {
       @apply uppercase;

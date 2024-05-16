@@ -7,11 +7,7 @@
     :transition="TRANSITION.DEFAULT"
   >
     <NuxtLink ref="btnHover" :to="localePath(`/work/${work?.id.toString()}`)">
-      <Video
-        class="video-btn-video"
-        autoplay
-        :videoUrl="`${config.public.strapiImagePath}${work?.attributes?.previewVideo?.data?.attributes?.url}`"
-      />
+      <VideoWrapper :url="work?.attributes?.previewVideo?.data?.attributes?.url" />
       <div class="video-btn-text-ct">
         <H :animated="false" v-if="work?.attributes.title" tag="h4" class="video-title">
           {{ work?.attributes.title }}

@@ -96,7 +96,7 @@
       </div>
     </section>
 
-    <section id="carousel" class="carousel-section center">
+    <section id="carousel" class="carousel-section">
       <template v-for="workArray in groupedWorks">
         <template v-if="workArray.length > 1">
           <div class="carousel-row">
@@ -113,21 +113,23 @@
     <section id="collaborations" class="collaborations-section center">
       <H tag="h3" class="collaborations-section-title">{{ $t('pg.home.workAndCollaborations') }}</H>
       <div class="partners-ct">
-        <Motion
-          v-for="(partner, i) in new Array(20).fill(partners[0])"
-          :href="partner?.attributes.link"
-          target="_blank"
-          class="partner-image"
-          :class="{ clickable: partner?.attributes.link }"
-          tag="a"
-          :initial="OPACITY.INITIAL"
-          :in-view="OPACITY.IN_VIEW"
-          :transition="{ ...TRANSITION.DEFAULT, delay: i / 10 }"
-        >
-          <Image
-            :src="`${config.public.strapiImagePath}${partner?.attributes.logo.data.attributes.url}`"
-          />
-        </Motion>
+        <template v-for="(partner, i) in partners">
+          <Motion
+            v-if="partner?.attributes.logo.data?.attributes.url"
+            :href="partner?.attributes.link"
+            target="_blank"
+            class="partner-image"
+            :class="{ clickable: partner?.attributes.link }"
+            tag="a"
+            :initial="OPACITY.INITIAL"
+            :in-view="OPACITY.IN_VIEW"
+            :transition="{ ...TRANSITION.DEFAULT, delay: i / 10 }"
+          >
+            <Image
+              :src="`${config.public.strapiImagePath}${partner?.attributes.logo.data?.attributes.url}`"
+            />
+          </Motion>
+        </template>
       </div>
     </section>
   </main>
@@ -247,7 +249,7 @@ onMounted(() => {
   }
 
   & .carousel-section {
-    @apply flex flex-col gap-10 py-10;
+    @apply flex flex-col gap-10 py-10 px-5;
 
     & .carousel-row {
       @apply flex gap-3;

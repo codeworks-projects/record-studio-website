@@ -1,10 +1,6 @@
 <template>
   <NuxtLink class="work-card clickable" :to="localePath(`/work/${work?.id.toString()}`)">
-    <Video
-      class="work-card-video"
-      autoplay
-      :videoUrl="`${config.public.strapiImagePath}${work?.attributes?.previewVideo?.data?.attributes?.url}`"
-    />
+    <VideoWrapper :url="work?.attributes?.previewVideo?.data?.attributes?.url" rounded />
     <div class="work-card-text-ct">
       <H :animated="false" v-if="work?.attributes.title" tag="h5" class="video-title">{{
         work?.attributes.title
@@ -31,10 +27,6 @@ const props = withDefaults(defineProps<Props>(), {})
 <style lang="postcss" scoped>
 .work-card {
   @apply relative flex-grow flex flex-col gap-2;
-
-  & .work-card-video {
-    @apply rounded-[14px] overflow-hidden;
-  }
 
   & .work-card-text-ct {
     @apply font-bold -space-y-2;

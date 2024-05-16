@@ -1,11 +1,7 @@
 <template>
   <main class="main">
     <section id="work-hero" class="work-hero-section">
-      <Video
-        class="work-hero"
-        autoplay
-        :videoUrl="`${config.public.strapiImagePath}${work?.attributes?.previewVideo?.data?.attributes?.url}`"
-      />
+      <VideoWrapper :url="work?.attributes?.previewVideo?.data?.attributes?.url" />
       <div class="work-hero-title-ct center">
         <H tag="h2" v-if="work?.attributes.title" class="hero-title">
           {{ work?.attributes.title }}
@@ -18,15 +14,42 @@
 
     <section id="dynamic" class="dynamic-section center">
       <template v-for="item in work?.attributes.dynamic">
-        <TextDynamic v-if="item.__component === 'work-dynamic.text'" :content="item.textContent" />
+        <TextDynamic
+          v-if="item.__component === 'work-dynamic.text'"
+          :textContent="item.textContent"
+        />
         <VideoDynamic
           v-if="item.__component === 'work-dynamic.video'"
-          :content="item.videoContent"
+          :videoContent="item.videoContent"
+          :videoUrl="item.videoUrl"
         />
         <ImageDynamic
           v-if="item.__component === 'work-dynamic.image'"
-          :content="item.imageContent"
+          :imageContent="item.imageContent"
         />
+        <ImageGrid1x3
+          v-if="item.__component === 'work-dynamic.image-grid1x3'"
+          :imageGrid1x3_Row1Col1="item.imageGrid1x3_Row1Col1"
+          :imageGrid1x3_Row1Col2="item.imageGrid1x3_Row1Col2"
+          :imageGrid1x3_Row1Col3="item.imageGrid1x3_Row1Col3"
+        />
+        <ImageGrid2x1
+          v-if="item.__component === 'work-dynamic.image-grid2x1'"
+          :imageGrid2x1_Row1Col1="item.imageGrid2x1_Row1Col1"
+          :imageGrid2x1_Row2Col1="item.imageGrid2x1_Row2Col1"
+        />
+        <ImageGrid2x2
+          v-if="item.__component === 'work-dynamic.image-grid2x2'"
+          :imageGrid2x2_Row1Col1="item.imageGrid2x2_Row1Col1"
+          :imageGrid2x2_Row1Col2="item.imageGrid2x2_Row1Col2"
+          :imageGrid2x2_Row2Col1="item.imageGrid2x2_Row2Col1"
+          :imageGrid2x2_Row2Col2="item.imageGrid2x2_Row2Col2"
+        />
+        <YoutubeDynamic
+          v-if="item.__component === 'work-dynamic.youtube'"
+          :youtubeID="item.youtubeID"
+        />
+        <VimeoDynamic v-if="item.__component === 'work-dynamic.vimeo'" :vimeoID="item.vimeoID" />
       </template>
     </section>
   </main>
@@ -55,7 +78,15 @@ const work = computed(() => (wd.value as any)?.data as Work)
   & .work-hero-section {
     & .work-hero-title-ct {
       @apply flex flex-col py-10;
+
+      & .hero-copy {
+        @apply font-medium;
+      }
     }
+  }
+
+  & .dynamic-section {
+    @apply flex flex-col gap-10;
   }
 }
 
