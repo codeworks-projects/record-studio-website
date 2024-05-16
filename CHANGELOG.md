@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.2.0...v1.3.0) (2024-05-16)
+
+
+### Features
+
+* new dynamic components (grid and iframe) ([c4edf3d](https://github.com/codeworks-projects/record-studio-website/commit/c4edf3d0d183b5386b771a47dca5fd198ff7ea94))
+
+
+### Bug Fixes
+
+* grid 2x1 layout ([005750a](https://github.com/codeworks-projects/record-studio-website/commit/005750abe35cb590521e53423602b01ac575488b))
+
 ## [1.2.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.1.1...v1.2.0) (2024-05-09)
 
 
