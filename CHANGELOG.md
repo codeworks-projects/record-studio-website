@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.3](https://github.com/codeworks-projects/record-studio-website/compare/v1.3.2...v1.3.3) (2024-05-16)
+
+
+### Bug Fixes
+
+* improved again header and footer padding ([cfe1f5f](https://github.com/codeworks-projects/record-studio-website/commit/cfe1f5fc76a4c1e9b4eed7f3fec5f9edbf832e9a))
+
 ### [1.3.2](https://github.com/codeworks-projects/record-studio-website/compare/v1.3.1...v1.3.2) (2024-05-16)
 
 
