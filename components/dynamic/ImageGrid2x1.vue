@@ -24,7 +24,7 @@ const config = useRuntimeConfig()
 
 <style lang="postcss" scoped>
 .image-grid-2x1-dynamic {
-  @apply grid grid-cols-2 gap-3 rounded-[14px] overflow-hidden select-none;
+  @apply grid grid-cols-1 gap-3 rounded-[14px] overflow-hidden select-none;
 
   & .image-grid-2x1-dynamic-image {
     /* @apply w-full h-[400px] object-cover; */
