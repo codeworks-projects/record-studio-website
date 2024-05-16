@@ -1,5 +1,5 @@
 <template>
-  <header class="header center">
+  <header class="header">
     <NuxtLink class="icon-ct clickable" :class="{ 'menu-open': showMenu }" :to="localePath('/')">
       <Icon name="logo-icon" />
     </NuxtLink>
@@ -60,7 +60,7 @@ const menu = [
 
 <style lang="postcss" scoped>
 .header {
-  @apply fixed top-0 left-0 right-0 py-5 flex items-center justify-between z-30;
+  @apply fixed top-0 left-0 right-0 p-5 flex items-center justify-between z-30;
 
   & .icon-ct {
     @apply w-20;

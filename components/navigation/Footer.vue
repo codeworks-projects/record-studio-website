@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer center">
+  <footer class="footer">
     <div class="footer-line" />
     <NuxtLink class="logo-ct clickable" :to="localePath('/')">
       <Icon name="logo" />
@@ -94,7 +94,7 @@ const localePath = useLocalePath()
 
 <style lang="postcss" scoped>
 .footer {
-  @apply flex flex-col gap-3 font-medium pb-10 pt-24;
+  @apply flex flex-col gap-3 font-medium pb-10 pt-24 px-5;
 
   & .footer-line {
     @apply h-[1px] bg-dark-opacity mb-10 rounded-full;

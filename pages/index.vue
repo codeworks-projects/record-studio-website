@@ -110,7 +110,7 @@
       </NuxtLink>
     </section>
 
-    <section id="collaborations" class="collaborations-section center">
+    <section id="collaborations" class="collaborations-section">
       <H tag="h3" class="collaborations-section-title">{{ $t('pg.home.workAndCollaborations') }}</H>
       <div class="partners-ct">
         <template v-for="(partner, i) in partners">
@@ -261,7 +261,7 @@ onMounted(() => {
   }
 
   & .collaborations-section {
-    @apply flex flex-col items-center pt-24;
+    @apply flex flex-col items-center pt-24 px-5;
 
     & .collaborations-section-title {
       @apply uppercase text-center mb-5;
