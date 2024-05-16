@@ -170,4 +170,10 @@ const menu = [
     }
   }
 }
+
+@media only screen and (min-width: 1300px) {
+  .header {
+    @apply px-20;
+  }
+}
 </style>
