@@ -1,8 +1,8 @@
 <template>
-  <div v-if="content" class="image-dynamic">
+  <div v-if="imageContent" class="image-dynamic">
     <Image
       class="image-dynamic-image"
-      :src="`${config.public.strapiImagePath}${content?.data?.attributes?.url}`"
+      :src="`${config.public.strapiImagePath}${imageContent?.data?.attributes?.url}`"
     />
   </div>
 </template>
@@ -11,7 +11,7 @@
 import type { StrapiMedia } from '~/types/common'
 
 type Props = {
-  content?: StrapiMedia
+  imageContent?: StrapiMedia
 }
 const config = useRuntimeConfig()
 const props = withDefaults(defineProps<Props>(), {})
@@ -19,10 +19,10 @@ const props = withDefaults(defineProps<Props>(), {})
 
 <style lang="postcss" scoped>
 .image-dynamic {
-  @apply my-10 rounded-[14px] overflow-hidden w-full h-[400px];
+  @apply rounded-[14px] overflow-hidden;
 
   & .image-dynamic-image {
-    @apply w-full h-[400px] object-contain;
+    /* @apply w-full h-[400px] object-cover; */
   }
 }
 @media only screen and (max-width: 980px) {

@@ -1,19 +1,19 @@
 <template>
-  <div v-if="content" class="text-dynamic">
-    <P>{{ content }}</P>
+  <div v-if="textContent" class="text-dynamic">
+    <P>{{ textContent }}</P>
   </div>
 </template>
 
 <script lang="ts" setup>
 type Props = {
-  content?: string
+  textContent?: string
 }
 const props = withDefaults(defineProps<Props>(), {})
 </script>
 
 <style lang="postcss" scoped>
 .text-dynamic {
-  @apply my-10;
+  @apply font-medium;
 }
 @media only screen and (max-width: 980px) {
   .text-dynamic {
