@@ -37,8 +37,22 @@
       <div class="footer-info language-ct">
         <H :animated="false" tag="h5">{{ $t('common.language') }}</H>
         <div class="info">
-          <p>{{ $t('common.english') }}</p>
-          <p>{{ $t('common.italian') }}</p>
+          <a
+            href="/"
+            :class="locale === 'en' && 'underline'"
+            class="clickable"
+            @click="setLocale('en')"
+          >
+            {{ $t('common.english') }}
+          </a>
+          <a
+            href="/it"
+            :class="locale === 'it' && 'underline'"
+            class="clickable"
+            @click="setLocale('it')"
+          >
+            {{ $t('common.italian') }}
+          </a>
         </div>
       </div>
       <div class="footer-info connect-ct">
@@ -53,7 +67,7 @@
           </a>
           <a
             class="social-icon-ct clickable"
-            href="http://linkedin.com/"
+            href="http://linkedin.com/TODO"
             target="_blank"
             title="record-studio-linkedin"
           >
@@ -89,6 +103,7 @@
 </template>
 
 <script lang="ts" setup>
+const { locale, setLocale } = useI18n()
 const localePath = useLocalePath()
 </script>
 

@@ -1,17 +1,30 @@
 <template>
   <div class="image-grid-2x1-dynamic">
-    <Image
-      class="image-grid-2x1-dynamic-image"
-      :src="`${config.public.strapiImagePath}${imageGrid2x1_Row1Col1?.data?.attributes?.url}`"
-    />
-    <Image
-      class="image-grid-2x1-dynamic-image"
-      :src="`${config.public.strapiImagePath}${imageGrid2x1_Row2Col1?.data?.attributes?.url}`"
-    />
+    <Motion
+      :initial="SLIDE_UP.INITIAL"
+      :in-view="SLIDE_UP.IN_VIEW"
+      :transition="{ ...TRANSITION.DEFAULT, delay: 0 }"
+    >
+      <Image
+        class="image-grid-2x1-dynamic-image"
+        :src="`${config.public.strapiImagePath}${imageGrid2x1_Row1Col1?.data?.attributes?.url}`"
+      />
+    </Motion>
+    <Motion
+      :initial="SLIDE_UP.INITIAL"
+      :in-view="SLIDE_UP.IN_VIEW"
+      :transition="{ ...TRANSITION.DEFAULT, delay: 0.2 }"
+    >
+      <Image
+        class="image-grid-2x1-dynamic-image"
+        :src="`${config.public.strapiImagePath}${imageGrid2x1_Row2Col1?.data?.attributes?.url}`"
+      />
+    </Motion>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { SLIDE_UP, TRANSITION } from '~/animations.config.json'
 import type { StrapiMedia } from '~/types/common'
 
 type Props = {
@@ -27,7 +40,7 @@ const config = useRuntimeConfig()
   @apply grid grid-cols-1 gap-3 rounded-[14px] overflow-hidden select-none;
 
   & .image-grid-2x1-dynamic-image {
-    /* @apply w-full h-[400px] object-cover; */
+    @apply w-full h-[400px] object-cover;
   }
 }
 @media only screen and (max-width: 980px) {

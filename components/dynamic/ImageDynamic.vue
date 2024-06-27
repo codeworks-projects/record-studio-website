@@ -1,13 +1,21 @@
 <template>
-  <div v-if="imageContent" class="image-dynamic">
+  <Motion
+    tag="div"
+    v-if="imageContent"
+    class="image-dynamic"
+    :initial="SLIDE_UP.INITIAL"
+    :in-view="SLIDE_UP.IN_VIEW"
+    :transition="TRANSITION.DEFAULT"
+  >
     <Image
       class="image-dynamic-image"
       :src="`${config.public.strapiImagePath}${imageContent?.data?.attributes?.url}`"
     />
-  </div>
+  </Motion>
 </template>
 
 <script lang="ts" setup>
+import { SLIDE_UP, TRANSITION } from '~/animations.config.json'
 import type { StrapiMedia } from '~/types/common'
 
 type Props = {

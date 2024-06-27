@@ -1,5 +1,12 @@
 <template>
-  <div v-if="videoContent" class="video-dynamic">
+  <Motion
+    tag="div"
+    v-if="videoContent"
+    class="video-dynamic"
+    :initial="SLIDE_UP.INITIAL"
+    :in-view="SLIDE_UP.IN_VIEW"
+    :transition="TRANSITION.DEFAULT"
+  >
     <Video
       class="work-hero"
       autoplay
@@ -21,10 +28,11 @@
         <Icon class="muted-icon" v-else name="speaker-x-mark" @click="toggleMuted()" />
       </div>
     </div>
-  </div>
+  </Motion>
 </template>
 
 <script lang="ts" setup>
+import { SLIDE_UP, TRANSITION } from '~/animations.config.json'
 import type { StrapiMedia } from '~/types/common'
 
 type Props = {

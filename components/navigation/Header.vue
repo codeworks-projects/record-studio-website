@@ -51,11 +51,11 @@ function toggleShowMenu(state?: boolean) {
 const localePath = useLocalePath()
 const { t } = useI18n()
 
-const menu = [
+const menu = computed(() => [
   { title: t('common.work'), link: '/work' },
   // { title: t('common.about'), link: '/about' },
   { title: t('common.contacts'), link: '/contacts' },
-]
+])
 </script>
 
 <style lang="postcss" scoped>
