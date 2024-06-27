@@ -37,7 +37,7 @@ export default defineNuxtConfig({
       ],
       noscript: [{ children: 'Javascript is required' }],
     },
-    pageTransition: { name: 'page', mode: 'out-in' },
+    // pageTransition: { name: 'page', mode: 'out-in' },
   },
 
   gsap: {

@@ -2,8 +2,10 @@
   <div class="vimeo-dynamic">
     <iframe
       class="vimeo-iframe"
-      :src="`https://player.vimeo.com/video/${vimeoID}?autoplay=1&muted=1&loop=1&autopause=0&dnt=1`"
+      :src="`https://player.vimeo.com/video/${vimeoID}?loop=1&autopause=0&dnt=1`"
       frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen
     ></iframe>
   </div>
 </template>
@@ -17,10 +19,16 @@ const props = withDefaults(defineProps<Props>(), {})
 
 <style lang="postcss" scoped>
 .vimeo-dynamic {
-  @apply rounded-[14px] overflow-hidden;
+  @apply relative rounded-[14px] overflow-hidden w-full;
+  padding-bottom: 56.25%;
 
   & .vimeo-iframe {
-    @apply w-full h-[400px] object-cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
   }
 }
 @media only screen and (max-width: 980px) {

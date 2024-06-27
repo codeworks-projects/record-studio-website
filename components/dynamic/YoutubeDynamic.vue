@@ -2,7 +2,7 @@
   <div class="youtube-dynamic">
     <iframe
       class="youtube-iframe"
-      :src="`https://www.youtube-nocookie.com/embed/${youtubeID}?mute=1&autoplay=1&loop=1&playlist=${youtubeID}`"
+      :src="`https://www.youtube-nocookie.com/embed/${youtubeID}?loop=1&playlist=${youtubeID}`"
       frameborder="0"
     ></iframe>
   </div>
@@ -20,7 +20,7 @@ const props = withDefaults(defineProps<Props>(), {})
   @apply rounded-[14px] overflow-hidden;
 
   & .youtube-iframe {
-    @apply w-full h-[400px] object-cover;
+    @apply w-full h-[600px] object-cover;
   }
 }
 @media only screen and (max-width: 980px) {
@@ -28,3 +28,5 @@ const props = withDefaults(defineProps<Props>(), {})
   }
 }
 </style>
+
+<!-- OpNFvPEwSJ8 -->

@@ -59,15 +59,15 @@
         <div class="info social-info">
           <a
             class="social-icon-ct clickable"
-            href="https://www.youtube.com/@recordstudio5140"
+            href="https://vimeo.com/user220307068"
             target="_blank"
-            title="record-studio-youtube"
+            title="record-studio-vimeo"
           >
-            <Icon class="social-icon" name="youtube" />
+            <Icon class="social-icon" name="vimeo" />
           </a>
           <a
             class="social-icon-ct clickable"
-            href="http://linkedin.com/TODO"
+            href="https://www.linkedin.com/company/recordstudio/"
             target="_blank"
             title="record-studio-linkedin"
           >

@@ -50,6 +50,30 @@ type DynamicComponent =
   | VimeoComponent
   | YoutubeComponent
 
+type HeroVideo = {
+  col_1: {
+    data: {
+      attributes: {
+        url: string
+      }
+    }[]
+  }
+  col_2: {
+    data: {
+      attributes: {
+        url: string
+      }
+    }[]
+  }
+  col_3: {
+    data: {
+      attributes: {
+        url: string
+      }
+    }[]
+  }
+}
+
 export type Work =
   | {
       id: string
@@ -64,6 +88,8 @@ export type Work =
         link?: string
         dynamic?: DynamicComponent[] | []
         title?: string
+        inEvidence?: boolean
+        inEvidenceBig?: boolean
         type?:
           | 'product'
           | 'gdo'

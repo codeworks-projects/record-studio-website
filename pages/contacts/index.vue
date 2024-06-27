@@ -38,14 +38,9 @@ const contacts = [
   },
   { title: t('common.phone'), content: t('contacts.phone'), link: `tel:${t('contacts.phone')}` },
   {
-    title: t('common.instagram'),
-    content: t('contacts.instagram', { at: '@' }),
-    link: 'https://www.instagram.com/record_studio_/',
-  },
-  {
-    title: t('common.youtube'),
-    content: t('contacts.youtube', { at: '@' }),
-    link: 'https://www.youtube.com/@recordstudio5140',
+    title: t('common.vimeo'),
+    content: t('contacts.vimeo', { at: '@' }),
+    link: 'https://vimeo.com/user220307068',
   },
 ]
 
@@ -70,7 +65,7 @@ useHead({
       @apply flex flex-col gap-10;
 
       .contact-item {
-        @apply flex flex-col font-bold -space-y-2;
+        @apply flex flex-col font-bold -space-y-2 w-fit;
 
         & .contact-item-title {
           @apply uppercase;

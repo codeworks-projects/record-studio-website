@@ -19,7 +19,8 @@
     "language": "Language",
     "italian": "Italiano",
     "english": "Inglese",
-    "noVideo": "Video not available"
+    "noVideo": "Video not available",
+    "vimeo": "Vimeo"
   },
   "pg": {
     "home": {
@@ -69,6 +70,7 @@
     "phone": "+39 342 3514967",
     "instagram": "{at}record_studio_",
     "youtube": "{at}RecordStudio",
+    "vimeo": "{at}RecordStudio",
     "vat": "03150280216",
     "sdi": "M5UXCR1"
   },
