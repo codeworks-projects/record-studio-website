@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.3.3...v1.4.0) (2024-06-27)
+
+
+### Features
+
+* motion in dynamic components ([59ba397](https://github.com/codeworks-projects/record-studio-website/commit/59ba397a0a97501722a7b5b2f1d95de8bc2faedf))
+* ui touchups ([52cb72d](https://github.com/codeworks-projects/record-studio-website/commit/52cb72decd86fce494b25c4b95bc014d61fb6fb2))
+
 ### [1.3.3](https://github.com/codeworks-projects/record-studio-website/compare/v1.3.2...v1.3.3) (2024-05-16)
 
 
