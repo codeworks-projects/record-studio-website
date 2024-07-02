@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.4.0...v1.5.0) (2024-07-02)
+
+
+### Features
+
+* added fashion, automotive and luxury categories ([ebcbe9b](https://github.com/codeworks-projects/record-studio-website/commit/ebcbe9bc628c57f6bba6aa566f8afc4483a324f0))
+
 ## [1.4.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.3.3...v1.4.0) (2024-06-27)
 
 
