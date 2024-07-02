@@ -100,6 +100,9 @@ export type Work =
           | 'timelapse'
           | 'hotellerie'
           | 'sport'
+          | 'fashion'
+          | 'automotive'
+          | 'luxury'
       }
     }
   | undefined
