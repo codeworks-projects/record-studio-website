@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.7.0...v1.8.0) (2024-07-08)
+
+
+### Features
+
+* optimized video background ([2f29c79](https://github.com/codeworks-projects/record-studio-website/commit/2f29c793250ca3041d21558a916213c9a4433f42))
+
 ## [1.7.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.6.0...v1.7.0) (2024-07-08)
 
 
