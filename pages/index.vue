@@ -15,7 +15,7 @@
       </NuxtLink>
     </section>
 
-    <section id="collaborations" class="collaborations-section">
+    <section v-if="partners.length" id="collaborations" class="collaborations-section">
       <H tag="h3" class="collaborations-section-title">{{ $t('pg.home.workAndCollaborations') }}</H>
       <div class="partners-ct">
         <template v-for="(partner, i) in partners">
@@ -63,7 +63,7 @@ const heroVideo = computed(() => (hv.value as any)?.data.attributes as HeroVideo
 
 // SEO
 useHead({
-  title: t('pg.home.meta.title') + ' | ' + t('contacts.companySimpleName'),
+  title: t('contacts.companySimpleName') + ' | ' + t('pg.home.meta.title'),
   meta: [{ name: 'description', content: t('pg.home.meta.description') }],
 })
 </script>
@@ -115,6 +115,12 @@ useHead({
 
       & .carousel-cta {
         @apply min-w-max pt-10;
+      }
+
+      & .carousel-grid {
+        & .video-btn {
+          @apply !col-span-2;
+        }
       }
     }
 

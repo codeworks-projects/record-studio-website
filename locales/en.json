@@ -19,7 +19,8 @@
     "language": "Language",
     "italian": "Italiano",
     "english": "Inglese",
-    "noVideo": "Video not available"
+    "noVideo": "Video not available",
+    "vimeo": "Vimeo"
   },
   "pg": {
     "home": {
@@ -38,21 +39,21 @@
     },
     "privacy": {
       "meta": {
-        "title": "Privacy",
-        "description": "Privacy Policy"
+        "title": "Privacy & Cookie Policy",
+        "description": "The Privacy & Cookie Policy of Record Studio Srl."
       }
     },
     "work": {
       "meta": {
-        "title": "Work",
-        "description": "Our works"
+        "title": "Our works",
+        "description": "Explore our portfolio showcasing the pinnacle of video creativity and innovation. Discover how we transform concepts into captivating visual stories. From corporate branding to cinematic masterpieces, our diverse portfolio exemplifies our commitment to excellence in every frame."
       },
       "title": "Work"
     },
     "contacts": {
       "meta": {
-        "title": "Contacts",
-        "description": "Contact us"
+        "title": "Contact us",
+        "description": "Email address, phone number, and social media links of Record Studio Srl."
       },
       "title": "Contacts"
     }
@@ -69,6 +70,7 @@
     "phone": "+39 342 3514967",
     "instagram": "{at}record_studio_",
     "youtube": "{at}RecordStudio",
+    "vimeo": "{at}RecordStudio",
     "vat": "03150280216",
     "sdi": "M5UXCR1"
   },

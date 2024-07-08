@@ -1,61 +1,61 @@
 {
   "common": {
-    "vat": "VAT",
+    "vat": "P. IVA",
     "sdi": "SDI",
-    "contactUs": "Contact Us",
-    "seeOurPresentation": "See our presentation",
-    "work": "Work",
-    "about": "About",
-    "contacts": "Contacts",
-    "connect": "Connect",
-    "letsTalk": "Let's talk!",
-    "privacy": "Privacy Policy",
+    "contactUs": "Contattaci",
+    "seeOurPresentation": "Guarda la nostra presentazione",
+    "work": "Lavori",
+    "about": "Chi siamo",
+    "contacts": "Contatti",
+    "connect": "Collegamenti",
+    "letsTalk": "Parliamo!",
+    "privacy": "Informativa sulla privacy",
     "youtube": "YouTube",
     "linkedin": "LinkedIn",
     "instagram": "Instagram",
     "email": "Email",
-    "address": "Address",
-    "phone": "Phone",
-    "language": "Language",
+    "address": "Indirizzo",
+    "phone": "Telefono",
+    "language": "Lingua",
     "italian": "Italiano",
-    "english": "Inglese",
-    "noVideo": "Video not available",
+    "english": "English",
+    "noVideo": "Video non disponibile",
     "vimeo": "Vimeo"
   },
   "pg": {
     "home": {
       "meta": {
-        "title": "Designing, Capturing, and Telling Emotions",
-        "description": "Record Studio Srl is born to design, capture, and tell emotions"
+        "title": "Progettare, Catturare e Raccontare Emozioni",
+        "description": "Record Studio Srl nasce per progettare, catturare e raccontare emozioni"
       },
-      "comingSoon": "We design, capture, and tell emotions.",
-      "comingSoonDescription": "We are a studio where quality and creativity are the foundation of innovation and experimentation: dynamic, youthful, and clean photography.",
-      "heroTitle1": "We",
-      "heroSmallTitle": "Creative multimedia\nadvertising\nstudio production\nbased in Italy.",
-      "heroTitle2": "Were born",
-      "heroTitle3": "__for__ creative adv",
-      "discoverAllProjects": "Discover all projects",
-      "workAndCollaborations": "Work & Collaborations"
+      "comingSoon": "Noi progettiamo, catturiamo e raccontiamo emozioni.",
+      "comingSoonDescription": "Siamo uno studio dove qualità e creatività sono alla base dell'innovazione e dell'esperimento: fotografia dinamica, giovane e pulita.",
+      "heroTitle1": "Noi",
+      "heroSmallTitle": "Studio creativo multimediale\nproduzione pubblicitaria\nbasato in Italia.",
+      "heroTitle2": "Siamo nati",
+      "heroTitle3": "per la pubblicità creativa",
+      "discoverAllProjects": "Scopri tutti i progetti",
+      "workAndCollaborations": "Lavoro e Collaborazioni"
     },
     "privacy": {
       "meta": {
-        "title": "Privacy",
-        "description": "Privacy Policy"
+        "title": "Informativa sulla Privacy e sui Cookie",
+        "description": "L'Informativa sulla Privacy e sui Cookie di Record Studio Srl."
       }
     },
     "work": {
       "meta": {
-        "title": "Work",
-        "description": "Our works"
+        "title": "I nostri lavori",
+        "description": "Esplora il nostro portfolio immergendoti nella nostra creatività e l'innovazione video. Scopri come trasformiamo i concetti in avvincenti storie visive. Dal branding aziendale ai cortomoetraggi mozzafiato, il nostro portfolio diversificato esemplifica il nostro impegno per l'eccellenza in ogni fotogramma."
       },
-      "title": "Work"
+      "title": "Lavori"
     },
     "contacts": {
       "meta": {
-        "title": "Contacts",
-        "description": "Contact us"
+        "title": "Contattaci",
+        "description": "Indirizzo email, numero di telefono e link ai social media di Record Studio Srl."
       },
-      "title": "Contacts"
+      "title": "Contatti"
     }
   },
   "layouts": {
@@ -79,19 +79,19 @@
       "product": "Prodotto",
       "gdo": "GDO",
       "design": "Design",
-      "event": "Video event",
-      "corporate": "Corporate spot",
-      "food": "Food",
+      "event": "Evento video",
+      "corporate": "Spot aziendale",
+      "food": "Cibo",
       "timelapse": "Timelapse",
       "hotellerie": "Hotellerie",
       "sport": "Sport",
-      "fashion": "Fashion",
+      "fashion": "Moda",
       "automotive": "Automotive",
-      "luxury": "Luxury",
+      "luxury": "Lusso",
       "spot": "Spot TV",
-      "advertising_campaign": "Advertising campaign",
+      "advertising_campaign": "Campagna pubblicitaria",
       "social_campaign": "Web commercial"
     }
   },
-  "TBD": "Todo"
+  "TBD": "Da fare"
 }

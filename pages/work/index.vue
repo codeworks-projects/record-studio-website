@@ -59,7 +59,7 @@ useHead({
       @apply -space-y-2;
 
       & .work-carousel {
-        @apply grid grid-cols-2;
+        @apply grid grid-cols-2 gap-y-4;
       }
     }
   }

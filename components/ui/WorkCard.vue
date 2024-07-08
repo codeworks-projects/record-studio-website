@@ -42,6 +42,11 @@ const props = withDefaults(defineProps<Props>(), {})
 }
 @media only screen and (max-width: 980px) {
   .work-card {
+    & .work-card-text-ct {
+      & .video-title {
+        @apply text-sm;
+      }
+    }
   }
 }
 </style>
