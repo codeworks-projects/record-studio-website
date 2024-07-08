@@ -44,9 +44,9 @@ const playing = ref(false)
 
 <style lang="postcss" scoped>
 .video-ct {
-  @apply bg-cover bg-black
+  @apply bg-cover
   relative aspect-video w-full overflow-hidden
-  flex items-center justify-center;
+  flex items-center justify-center bg-[#222];
 
   & video,
   & img {
