@@ -103,6 +103,8 @@ export type Work =
           | 'fashion'
           | 'automotive'
           | 'luxury'
+        metaTitle?: string
+        metaDescription?: string
       }
     }
   | undefined

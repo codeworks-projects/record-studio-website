@@ -49,11 +49,6 @@ import type { HeroVideo, Work } from '~/types/work'
 const { t } = useI18n()
 const localePath = useLocalePath()
 
-useHead({
-  title: t('contacts.companySimpleName') + ' | ' + t('pg.home.meta.title'),
-  meta: [{ name: 'description', content: t('pg.home.meta.description') }],
-})
-
 const config = useRuntimeConfig()
 const { data: pd } = await useFetch(`${config.public.strapiUrl}/partners?populate=*`)
 const partners = computed(() => (pd.value as any)?.data as Partner[])
@@ -65,6 +60,12 @@ const works = computed(() => (wd.value as any)?.data as Work[])
 
 const { data: hv } = await useFetch(`${config.public.strapiUrl}/hero-video?populate=*`)
 const heroVideo = computed(() => (hv.value as any)?.data.attributes as HeroVideo)
+
+// SEO
+useHead({
+  title: t('pg.home.meta.title') + ' | ' + t('contacts.companySimpleName'),
+  meta: [{ name: 'description', content: t('pg.home.meta.description') }],
+})
 </script>
 
 <style lang="postcss" scoped>

@@ -61,16 +61,22 @@ import type { Work } from '~/types/work'
 const { t } = useI18n()
 const route = useRoute()
 
-useHead({
-  title: t('contacts.companySimpleName') + ' | ' + t('pg.work.meta.title'),
-  meta: [{ name: 'description', content: t('pg.work.meta.description') }],
-})
-
 const config = useRuntimeConfig()
 const { data: wd } = await useFetch(
   `${config.public.strapiUrl}/works/${route.params.id}?&populate[dynamic][populate]=*&populate[previewVideo][populate]=*`
 )
 const work = computed(() => (wd.value as any)?.data as Work)
+
+const seoTitle = computed(() => work.value?.attributes.metaTitle || work.value?.attributes.title)
+const seoDescription = computed(
+  () => work.value?.attributes.metaTitle || work.value?.attributes.copy
+)
+
+// SEO
+useHead({
+  title: seoTitle.value + ' | ' + t('contacts.companySimpleName'),
+  meta: [{ name: 'description', content: seoDescription.value }],
+})
 </script>
 
 <style lang="postcss" scoped>

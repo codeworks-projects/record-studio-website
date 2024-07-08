@@ -44,8 +44,9 @@ const contacts = [
   },
 ]
 
+// SEO
 useHead({
-  title: t('contacts.companySimpleName') + ' | ' + t('pg.contacts.meta.title'),
+  title: t('pg.contacts.meta.title') + ' | ' + t('contacts.companySimpleName'),
   meta: [{ name: 'description', content: t('pg.contacts.meta.description') }],
 })
 </script>

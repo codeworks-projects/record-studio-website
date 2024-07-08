@@ -221,9 +221,10 @@ const config = useRuntimeConfig()
 const url = useRequestURL()
 const DOMAIN_URL = config.public.NUXT_PUBLIC_DOMAIN_URL || url.host
 
-// Head
+// SEO
 useHead({
-  title: t('contacts.companySimpleName') + ' | ' + t('pg.privacy.meta.title'),
+  title: t('pg.privacy.meta.title') + ' | ' + t('contacts.companySimpleName'),
+  meta: [{ name: 'description', content: t('pg.privacy.meta.description') }],
 })
 </script>
 

@@ -23,14 +23,15 @@ import type { Work } from '~/types/work'
 
 const { t } = useI18n()
 
+const config = useRuntimeConfig()
+const { data: wd } = await useFetch(`${config.public.strapiUrl}/works?populate=*&sort=worksDate`)
+const works = computed(() => (wd.value as any)?.data as Work[])
+
+// SEO
 useHead({
-  title: t('contacts.companySimpleName') + ' | ' + t('pg.work.meta.title'),
+  title: t('pg.work.meta.title') + ' | ' + t('contacts.companySimpleName'),
   meta: [{ name: 'description', content: t('pg.work.meta.description') }],
 })
-
-const config = useRuntimeConfig()
-const { data: wd } = await useFetch(`${config.public.strapiUrl}/works?populate=*`)
-const works = computed(() => (wd.value as any)?.data as Work[])
 </script>
 
 <style lang="postcss" scoped>
