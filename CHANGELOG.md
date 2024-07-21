@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.8.0...v1.9.0) (2024-07-21)
+
+
+### Features
+
+* added new campaign types ([9bef2eb](https://github.com/codeworks-projects/record-studio-website/commit/9bef2ebb26aae33247f9a9cf667ff4b60088c8fa))
+
 ## [1.8.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.7.0...v1.8.0) (2024-07-08)
 
 
