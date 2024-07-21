@@ -88,9 +88,12 @@
       "fashion": "Moda",
       "automotive": "Automotive",
       "luxury": "Lusso",
-      "spot": "Spot TV",
+      "spot": "Spot emozionale",
       "advertising_campaign": "Campagna pubblicitaria",
-      "social_campaign": "Web commercial"
+      "social_campaign": "Campagna social",
+      "storytelling_campaign": "Campagna storytelling",
+      "record_campaign": "Campagna record",
+      "creative_spot": "Spot creativo"
     }
   },
   "TBD": "Da fare"
