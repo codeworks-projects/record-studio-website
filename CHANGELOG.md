@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.9.0...v1.10.0) (2024-07-22)
+
+
+### Features
+
+* applied last pre release fixes ([137a008](https://github.com/codeworks-projects/record-studio-website/commit/137a008d0f0a34d2dcbaad7f7f18d0786d384845))
+
 ## [1.9.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.8.0...v1.9.0) (2024-07-21)
 
 
