@@ -18,7 +18,7 @@
     "phone": "Phone",
     "language": "Language",
     "italian": "Italiano",
-    "english": "Inglese",
+    "english": "English",
     "noVideo": "Video not available",
     "vimeo": "Vimeo"
   },
@@ -84,6 +84,7 @@
       "food": "Food",
       "timelapse": "Timelapse",
       "hotellerie": "Hotellerie",
+      "commercial": "Commercial",
       "sport": "Sport",
       "fashion": "Fashion",
       "automotive": "Automotive",

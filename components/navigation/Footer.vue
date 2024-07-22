@@ -45,14 +45,14 @@
           >
             {{ $t('common.english') }}
           </a>
-          <a
+          <!--<a
             href="/it"
             :class="locale === 'it' && 'underline'"
             class="clickable"
             @click="setLocale('it')"
           >
             {{ $t('common.italian') }}
-          </a>
+          </a>-->
         </div>
       </div>
       <div class="footer-info connect-ct">
