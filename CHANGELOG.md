@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.11.0...v1.12.0) (2024-08-22)
+
+
+### Features
+
+* hidden small text in intro banner on mobile ([4795b8b](https://github.com/codeworks-projects/record-studio-website/commit/4795b8b65fd3cf9cf2e0a62919653b11b45a2e67))
+
 ## [1.11.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.10.0...v1.11.0) (2024-07-22)
 
 
