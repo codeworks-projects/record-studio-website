@@ -149,5 +149,12 @@ onMounted(() => {
 }
 
 @media only screen and (max-width: 980px) {
+  .hero-section {
+    & .hero-text-top {
+      & .small-text {
+        @apply hidden;
+      }
+    }
+  }
 }
 </style>
