@@ -1,26 +1,24 @@
-FROM node:18-slim
+FROM node:18-alpine as build
 
-# Set the working directory
 WORKDIR /usr/src/app
 
-RUN chown -R node:node /usr/src/app
+COPY yarn.lock ./
+COPY package.json ./
 
-# Copy package.json and package-lock.json
-COPY --chown=node:node yarn.lock ./
-COPY --chown=node:node package.json ./
-
-# Install dependencies
 RUN yarn install
 
-# Copy TypeScript files
-COPY --chown=node:node . .
+COPY . .
 
 RUN yarn build
 
-# Expose the port your app will run on
-EXPOSE 3000
+FROM node:18-alpine as prod
+
+WORKDIR /usr/src/app
+
+COPY --from=build --chown=node:node /usr/src/app/.output /usr/src/app/.output
 
 USER node
 
-# Command to run your application
-CMD ["yarn", "preview"]
+EXPOSE 3000
+
+CMD ["node", ".output/server/index.mjs"]
