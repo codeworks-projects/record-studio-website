@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.13.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.12.1...v1.13.0) (2024-10-25)
+
+
+### Features
+
+* cookie banner ([a050e91](https://github.com/codeworks-projects/record-studio-website/commit/a050e910ceead3561e1ed7a623adac2e5eac28ee))
+
 ### [1.12.1](https://github.com/codeworks-projects/record-studio-website/compare/v1.12.0...v1.12.1) (2024-09-30)
 
 ## [1.12.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.11.0...v1.12.0) (2024-08-22)
