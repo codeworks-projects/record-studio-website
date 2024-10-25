@@ -15,6 +15,12 @@
         <slot />
         <Footer />
       </div>
+
+      <ClientOnly>
+        <Suspense>
+          <CookieBanner />
+        </Suspense>
+      </ClientOnly>
     </Body>
   </Html>
 </template>
@@ -22,6 +28,11 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const route = useRoute()
+// const { $gtm } = useNuxtApp()
+// $gtm('test', {
+//   parameter1: 'value1',
+//   parameter2: 'value2',
+// })
 
 const head = useLocaleHead({
   addDirAttribute: true,

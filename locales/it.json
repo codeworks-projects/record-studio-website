@@ -96,5 +96,13 @@
       "creative_spot": "Spot creativo"
     }
   },
+  "components": {
+    "cookie": {
+      "title": "Vuoi consentirci di utilizzare i cookie?",
+      "description": "Utilizziamo i cookie per ottimizzare la tua esperienza di navigazione.",
+      "accept": "Consenti selezionati",
+      "decline": "Rifiuta tutti"
+    }
+  },
   "TBD": "Da fare"
 }

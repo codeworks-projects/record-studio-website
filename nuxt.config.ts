@@ -89,6 +89,11 @@ export default defineNuxtConfig({
     public: {
       strapiUrl: '',
       strapiImagePath: '',
+      //
+      facebookPixelId: '',
+      googleTagManagerId: '',
+      facebookPixelEnabled: false,
+      googleTagManagerEnabled: false,
     },
   },
 
