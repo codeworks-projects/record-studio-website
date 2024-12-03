@@ -1,11 +1,12 @@
 <template>
   <div class="video-wrapper">
     <Video
-      v-if="url"
+      v-if="videoUrl || imageUrl"
       class="video-wrapper-video"
       :class="{ rounded }"
       autoplay
-      :videoUrl="`${config.public.strapiImagePath}${url}`"
+      :videoUrl="videoUrl ? `${config.public.strapiImagePath}${videoUrl}` : undefined"
+      :imageUrl="imageUrl ? `${config.public.strapiImagePath}${imageUrl}` : undefined"
     />
     <div v-else class="work-wrapper-video work-wrapper-fallback" :class="{ rounded }">
       <p>{{ $t('common.noVideo') }}</p>
@@ -15,7 +16,8 @@
 
 <script lang="ts" setup>
 type Props = {
-  url?: string
+  videoUrl?: string
+  imageUrl?: string
   rounded?: boolean
 }
 const props = withDefaults(defineProps<Props>(), {})

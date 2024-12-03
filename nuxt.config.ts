@@ -51,7 +51,7 @@ export default defineNuxtConfig({
     shim: false,
   },
 
-  css: ['~/assets/css/main.css', '~/assets/css/thicccboi.css'],
+  css: ['~/assets/css/main.css', '~/assets/css/font.css'],
   postcss: {
     plugins: {
       'tailwindcss/nesting': {},

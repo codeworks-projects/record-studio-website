@@ -25,7 +25,18 @@ const { t } = useI18n()
 
 const config = useRuntimeConfig()
 const { data: wd } = await useFetch(`${config.public.strapiUrl}/works?populate=*&sort=worksDate`)
-const works = computed(() => (wd.value as any)?.data as Work[])
+
+const works = computed(() => {
+  const workArray = (wd.value as any)?.data as Work[]
+  if (!Array.isArray(workArray)) return []
+
+  return [...workArray].map((work, index) => {
+    if (index % 3 !== 2) {
+      delete (work as any).attributes.previewVideo
+    }
+    return work
+  })
+})
 
 // SEO
 useHead({

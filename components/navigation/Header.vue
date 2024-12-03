@@ -31,7 +31,7 @@
           target="_blank"
           title="contact-us"
         >
-          <Button :animated="false" :value="$t('common.letsTalk')" />
+          <Button :animated="false" :value="$t('common.letsTalk')" class="header-btn-btn" />
         </a>
       </ul>
     </nav>
@@ -64,10 +64,14 @@ const menu = computed(() => [
 
   & .icon-ct {
     @apply w-20;
+
+    & svg {
+      @apply fill-white;
+    }
   }
 
   & .menu-ct {
-    @apply text-white font-bold flex items-center gap-10 transition-all;
+    @apply text-white font-medium flex items-center gap-10 transition-all lowercase;
 
     & .menu {
       @apply flex items-center gap-10;
@@ -92,6 +96,10 @@ const menu = computed(() => [
 
         &.menu-hover {
           @apply opacity-50;
+        }
+
+        & .header-btn-btn {
+          @apply lowercase font-medium;
         }
       }
     }

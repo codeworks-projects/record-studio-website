@@ -1,6 +1,13 @@
 <template>
   <NuxtLink class="work-card clickable" :to="localePath(`/work/${work?.id.toString()}`)">
-    <VideoWrapper :url="work?.attributes?.previewVideo?.data?.attributes?.url" rounded />
+    <VideoWrapper
+      :video-url="
+        work?.attributes?.minimizedPreviewVideo?.data?.attributes?.url ||
+        work?.attributes?.previewVideo?.data?.attributes?.url
+      "
+      :image-url="work?.attributes?.previewImage?.data?.attributes?.url"
+      rounded
+    />
     <div class="work-card-text-ct">
       <H :animated="false" v-if="work?.attributes.title" tag="h5" class="video-title">{{
         work?.attributes.title

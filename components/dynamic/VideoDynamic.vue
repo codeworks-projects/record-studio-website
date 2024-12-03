@@ -10,7 +10,16 @@
     <Video
       class="work-hero"
       autoplay
-      :videoUrl="`${config.public.strapiImagePath}${videoContent?.data?.attributes?.url}`"
+      :videoUrl="
+        videoContent?.data?.attributes?.url
+          ? `${config.public.strapiImagePath}${videoContent?.data?.attributes?.url}`
+          : undefined
+      "
+      :imageUrl="
+        imageContent?.data?.attributes?.url
+          ? `${config.public.strapiImagePath}${imageContent?.data?.attributes?.url}`
+          : undefined
+      "
       :muted="muted"
     />
     <div class="action-icons-ct">

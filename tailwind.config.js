@@ -38,9 +38,9 @@ module.exports = {
         input: '40px',
       },
       fontFamily: {
-        title: ['Thicccboi', 'sans-serif'],
-        subtitle: ['Playfair Display', 'sans-serif'],
-        sans: ['Thicccboi', 'sans-serif'],
+        title: ['BugrinoTrials', 'sans-serif'],
+        subtitle: ['AkzidenzGroteskBQ', 'sans-serif'],
+        sans: ['AkzidenzGroteskBQ', 'sans-serif'],
       },
       opacity: {
         disabled: 0.6,

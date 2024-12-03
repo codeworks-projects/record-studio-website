@@ -29,7 +29,7 @@ withDefaults(defineProps<Props>(), {
 
 <style lang="postcss" scoped>
 .title {
-  @apply font-title text-white max-w-[850px] font-bold leading-tight;
+  @apply font-title text-white max-w-[850px] font-normal leading-tight;
 
   &.is-h1 {
     @apply text-[90px] mb-4;

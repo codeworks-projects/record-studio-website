@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-withDefaults(
+const props = withDefaults(
   defineProps<{
     videoUrl?: string
     imageUrl?: string

@@ -117,6 +117,10 @@ const localePath = useLocalePath()
 
   & .logo-ct {
     @apply flex w-[200px];
+
+    & svg {
+      @apply fill-white;
+    }
   }
 
   & .info-ct {

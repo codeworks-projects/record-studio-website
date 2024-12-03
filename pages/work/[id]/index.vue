@@ -1,7 +1,10 @@
 <template>
   <main class="main">
     <section id="work-hero" class="work-hero-section">
-      <VideoWrapper :url="work?.attributes?.previewVideo?.data?.attributes?.url" />
+      <VideoWrapper
+        :video-url="work?.attributes?.previewVideo?.data?.attributes?.url"
+        :image-url="work?.attributes?.previewImage?.data?.attributes?.url"
+      />
       <div class="work-hero-title-ct center">
         <H tag="h2" v-if="work?.attributes.title" class="hero-title">
           {{ work?.attributes.title }}

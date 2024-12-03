@@ -12,7 +12,8 @@
           v-for="item in heroVideo.col_1.data"
           class="hero-video"
           autoplay
-          :videoUrl="`${$config.public.strapiImagePath}${item.attributes?.url}`"
+          :videoUrl="getMediaUrl(item.attributes, 'video')"
+          :imageUrl="getMediaUrl(item.attributes, 'image')"
         />
       </div>
       <div class="hero-grid-col hero-grid-col-2" v-if="heroVideo?.col_2">
@@ -20,7 +21,8 @@
           v-for="item in heroVideo.col_2.data"
           class="hero-video"
           autoplay
-          :videoUrl="`${$config.public.strapiImagePath}${item.attributes?.url}`"
+          :videoUrl="getMediaUrl(item.attributes, 'video')"
+          :imageUrl="getMediaUrl(item.attributes, 'image')"
         />
       </div>
       <div class="hero-grid-col hero-grid-col-3" v-if="heroVideo?.col_3">
@@ -28,7 +30,8 @@
           v-for="item in heroVideo.col_3.data"
           class="hero-video"
           autoplay
-          :videoUrl="`${$config.public.strapiImagePath}${item.attributes?.url}`"
+          :videoUrl="getMediaUrl(item.attributes, 'video')"
+          :imageUrl="getMediaUrl(item.attributes, 'image')"
         />
       </div>
     </Motion>
@@ -36,26 +39,38 @@
     <div class="hero-text-ct">
       <Motion
         tag="div"
-        class="center"
+        class="w-full"
         :initial="SLIDE_UP.INITIAL"
         :in-view="SLIDE_UP.IN_VIEW"
         :transition="{ ...TRANSITION.DEFAULT, delay: 0.5 }"
       >
-        <div class="hero-text-top">
-          <h1>{{ $t('pg.home.heroTitle1') }}</h1>
-          <Motion
+        <h1 class="hero-text-top">
+          <span>{{ $t('pg.home.title1') }} </span>
+          <span> {{ $t('pg.home.title2') }}</span>
+          <!-- <Motion
             tag="p"
             class="small-text"
             v-html="markdownParser($t('pg.home.heroSmallTitle'))"
             :initial="SLIDE_RIGHT.INITIAL"
             :in-view="SLIDE_RIGHT.IN_VIEW"
             :transition="{ ...TRANSITION.DEFAULT, delay: 1 }"
-          />
-        </div>
-        <h1>{{ $t('pg.home.heroTitle2') }}</h1>
-        <h1 v-html="markdownParser($t('pg.home.heroTitle3'))" />
+          /> -->
+        </h1>
+        <!-- <h1>{{ $t('pg.home.heroTitle2') }}</h1>
+        <h1 v-html="markdownParser($t('pg.home.heroTitle3'))" /> -->
       </Motion>
     </div>
+    <Motion
+      tag="div"
+      class="h-screen"
+      :initial="SLIDE_UP.INITIAL"
+      :in-view="SLIDE_UP.IN_VIEW"
+      :transition="{ ...TRANSITION.DEFAULT, delay: 0.5 }"
+    >
+      <div class="logo">
+        <Icon name="logo" />
+      </div>
+    </Motion>
   </section>
 </template>
 
@@ -65,6 +80,8 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import type { HeroVideo } from '~/types/work'
 
+const config = useRuntimeConfig()
+
 gsap.registerPlugin(ScrollTrigger)
 
 type Props = {
@@ -72,6 +89,12 @@ type Props = {
 }
 
 const props = defineProps<Props>()
+
+const getMediaUrl = (attributes: Record<string, string>, mime: string) => {
+  return attributes?.mime?.startsWith(mime)
+    ? `${config.public.strapiImagePath}${attributes?.url}`
+    : undefined
+}
 
 onMounted(() => {
   const t = gsap.timeline({
@@ -106,6 +129,10 @@ onMounted(() => {
   t.to('.hero-text-ct', { filter: 'blur(100px)' }, '<20%')
   t.to('.hero-text-ct', { opacity: 0 }, '<20%')
   t.to('.hero-text-ct', { scale: '1.1' }, '<30%')
+  t.to('.logo', { backgroundColor: 'rgba(0, 0, 0, 0)' }, 0)
+  t.to('.logo', { filter: 'blur(100px)' }, '<20%')
+  t.to('.logo', { opacity: 0 }, '<20%')
+  t.to('.logo', { scale: '1.1' }, '<30%')
 })
 </script>
 
@@ -118,6 +145,14 @@ onMounted(() => {
 
   font-size: min(9vw, 100px);
   line-height: min(8vw, 90px);
+
+  & .logo {
+    @apply absolute bottom-10 left-1/2 -translate-x-1/2;
+
+    & svg {
+      @apply h-16 md:h-24;
+    }
+  }
 
   & .hero-grid {
     @apply absolute left-0 right-0 top-0 bottom-0 flex justify-center items-center gap-[40px];
@@ -136,13 +171,17 @@ onMounted(() => {
     background-color: rgba(0, 0, 0, 0.7);
 
     & .hero-text-top {
-      @apply flex items-center pt-36;
+      @apply max-w-[1100px] px-10 w-full flex flex-col md:gap-3 pt-36 font-title font-light whitespace-pre-line mx-auto text-2xl sm:text-6xl md:text-7xl;
 
       & .small-text {
-        @apply font-medium normal-case;
+        @apply font-normal text-center normal-case;
 
         font-size: min(1.1vw, 14px);
         line-height: min(1.6vw, 18px);
+      }
+
+      & span:last-child {
+        @apply text-right opacity-80;
       }
     }
   }

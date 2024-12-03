@@ -7,7 +7,13 @@
     :transition="TRANSITION.DEFAULT"
   >
     <NuxtLink ref="btnHover" :to="localePath(`/work/${work?.id.toString()}`)">
-      <VideoWrapper :url="work?.attributes?.previewVideo?.data?.attributes?.url" />
+      <VideoWrapper
+        :video-url="
+          work?.attributes?.minimizedPreviewVideo?.data?.attributes?.url ||
+          work?.attributes?.previewVideo?.data?.attributes?.url
+        "
+        :image-url="work?.attributes?.previewImage?.data?.attributes?.url"
+      />
       <div class="video-btn-text-ct">
         <H :animated="false" v-if="work?.attributes.title" tag="h4" class="video-title">
           {{ work?.attributes.title }}
@@ -39,14 +45,14 @@ const props = withDefaults(defineProps<Props>(), {})
   @apply relative rounded-[14px] overflow-hidden flex-grow;
 
   & .video-btn-text-ct {
-    @apply absolute bottom-5 left-5 -space-y-2;
+    @apply absolute bottom-5 left-5 space-y-1;
 
     & .video-title {
       @apply uppercase leading-6;
     }
 
     & .video-subtitle {
-      @apply italic text-[24px];
+      @apply text-lg lowercase;
     }
   }
 }
