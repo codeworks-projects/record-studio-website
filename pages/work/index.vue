@@ -30,12 +30,13 @@ const works = computed(() => {
   const workArray = (wd.value as any)?.data as Work[]
   if (!Array.isArray(workArray)) return []
 
-  return [...workArray].map((work, index) => {
+  return workArray
+  /* FIXME: uncomment this code and remove above line to enable videos alternate grid - return [...workArray].map((work, index) => {
     if (index % 3 !== 2) {
       delete (work as any).attributes.previewVideo
     }
     return work
-  })
+  }) */
 })
 
 // SEO
