@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.1](https://github.com/codeworks-projects/record-studio-website/compare/v1.14.0...v1.14.1) (2024-12-25)
+
+
+### Bug Fixes
+
+* momentarily re-enabled full videos list ([c45b888](https://github.com/codeworks-projects/record-studio-website/commit/c45b88883be2385ab9b75df4b75d9491945a1382))
+
 ## [1.14.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.13.0...v1.14.0) (2024-12-25)
 
 
