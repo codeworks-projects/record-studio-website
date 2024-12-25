@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.14.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.13.0...v1.14.0) (2024-12-25)
+
+
+### Features
+
+* added Plausible ([c4256bd](https://github.com/codeworks-projects/record-studio-website/commit/c4256bd8ada7066e4c396720796c7ceeef583aa6))
+* update style, improve video performance ([dcd71bd](https://github.com/codeworks-projects/record-studio-website/commit/dcd71bd58b8d1c2d88b56095711148992e6b14c2))
+
 ## [1.13.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.12.1...v1.13.0) (2024-10-25)
 
 
