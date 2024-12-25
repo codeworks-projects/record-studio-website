@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@formkit/auto-animate/nuxt',
     '@nuxt/image',
     '@oku-ui/motion-nuxt',
+    '@nuxtjs/plausible',
   ],
   // devtools: {
   //   enabled: true,
@@ -134,6 +135,11 @@ export default defineNuxtConfig({
 
   build: {
     transpile: ['tslib'],
+  },
+
+  plausible: {
+    // Prevent tracking on localhost
+    ignoredHostnames: ['localhost'],
   },
 
   telemetry: false,
