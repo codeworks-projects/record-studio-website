@@ -157,7 +157,7 @@ if (
 
 <style lang="postcss" scoped>
 .cookie-banner-ct {
-  @apply fixed bottom-5 right-5 z-[999] select-none;
+  @apply fixed bottom-5 left-5 z-[999] select-none;
 
   & .cookie-banner {
     @apply flex flex-col gap-7 rounded-lg bg-white px-10 py-10 text-black;
@@ -198,7 +198,7 @@ if (
   }
 
   & .open-banner {
-    @apply cursor-pointer rounded-xl bg-white p-2;
+    @apply cursor-pointer rounded-xl bg-white p-2 w-fit;
 
     & .open-icon {
       @apply w-7 h-7 text-primary;
@@ -213,7 +213,7 @@ if (
 
 @media (max-width: theme('screens.md')) {
   .cookie-banner-ct {
-    @apply bottom-2 left-2 right-2;
+    @apply bottom-2 right-2 left-2;
 
     & .cookie-banner {
       & .cookie-btn-ct {
