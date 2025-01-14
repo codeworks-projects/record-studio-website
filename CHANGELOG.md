@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.15.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.14.2...v1.15.0) (2025-01-14)
+
+
+### Features
+
+* restored alternate image/video grid ([d857111](https://github.com/codeworks-projects/record-studio-website/commit/d8571118a90556d114dfb57e66ca9ddc1ab96969))
+
 ### [1.14.2](https://github.com/codeworks-projects/record-studio-website/compare/v1.14.1...v1.14.2) (2025-01-02)
 
 
