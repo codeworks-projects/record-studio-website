@@ -75,14 +75,14 @@ function keypress(event: KeyboardEvent) {
   @apply relative;
 
   & input {
-    @apply h-input text-base px-5 bg-input resize-none text-black font-medium rounded-md;
+    @apply h-input   bg-transparent resize-none text-white font-bold text-lg   border-white border-b;
 
     width: 300px;
     padding-top: 10px;
     padding-bottom: 10px;
 
     &:focus {
-      @apply outline-none bg-input-focus;
+      @apply outline-none;
     }
 
     &[type='search'] {

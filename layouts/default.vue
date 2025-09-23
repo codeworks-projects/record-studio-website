@@ -10,6 +10,8 @@
       </template>
     </Head>
     <Body>
+      <NotificationCenter />
+
       <div class="relative bg-black min-h-screen overflow-x-hidden">
         <Header />
         <slot />

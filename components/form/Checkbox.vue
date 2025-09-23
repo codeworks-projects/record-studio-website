@@ -2,17 +2,20 @@
   <div :class="{ disabled }">
     <InputLabel v-if="title && type === 'switch-on'" :text="title" />
     <div
+      class="flex items-center"
       :class="{
         checkbox: true,
         'switch-on': type === 'switch-on',
-        clickable: type === 'switch-on',
+        __clickable: type === 'switch-on',
         checked,
+        black,
       }"
       @click="clickInput"
     >
       <div class="input">
         <input
           ref="inputRef"
+          :class="{ black }"
           v-model="checked"
           type="checkbox"
           :disabled="disabled"
@@ -20,19 +23,20 @@
         />
         <icon name="check" />
       </div>
-      <label>
-        {{ label }}
-      </label>
+      <label class="font-bold" :class="{ black }" v-html="label || ''" />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+export type CheckboxTypes = 'checkbox' | 'switch-on'
+
 type Props = {
   label?: string
   title?: string
   disabled?: boolean
-  type?: 'checkbox' | 'switch-on'
+  black?: boolean
+  type?: CheckboxTypes
 }
 
 withDefaults(defineProps<Props>(), {
@@ -51,37 +55,45 @@ function clickInput() {
 
 <style lang="postcss" scoped>
 .checkbox {
-  @apply relative inline-block text-black select-none;
+  @apply relative inline-flex max-w-xs select-none items-start gap-1 text-white;
+
+  &.black {
+    @apply max-w-none text-black;
+  }
 
   & > .input {
-    @apply relative inline-block mr-2 text-center;
+    @apply relative mr-2 inline-block flex-shrink-0 text-center;
 
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
 
     & > input {
-      @apply absolute w-full h-full left-0 top-0 rounded-md align-top cursor-pointer bg-input border-primary;
+      @apply absolute left-0 top-0 h-full w-full cursor-pointer rounded-sm border-white bg-transparent align-top;
+
+      &.black {
+        @apply border-black;
+      }
 
       transition: background 0.2s ease;
       -webkit-appearance: none;
-      border-width: 3px;
+      border-width: 1px;
 
       &:focus {
         @apply outline-none;
       }
 
       &:checked {
-        @apply bg-primary !important;
+        @apply bg-white !important;
       }
     }
 
     & > svg {
-      @apply relative inline-block pointer-events-none opacity-0 align-top;
+      @apply pointer-events-none relative inline-block align-top opacity-0;
 
-      margin-top: 5px;
+      margin-top: 1px;
       width: 14px;
       height: 14px;
-      fill: #fff;
+      fill: #000;
       transition:
         opacity 0.2s ease,
         transform 0.2s ease;
@@ -90,9 +102,11 @@ function clickInput() {
   }
 
   & > label {
-    @apply inline-block text-black text-sm leading-tight font-semibold align-top cursor-pointer;
+    @apply inline-block cursor-pointer align-top text-sm leading-tight text-white;
 
-    margin-top: 0.35rem;
+    &.black {
+      @apply text-black;
+    }
   }
 
   &.checked {
@@ -106,7 +120,7 @@ function clickInput() {
   }
 
   &.switch-on {
-    @apply px-6 rounded-lg bg-input h-input;
+    @apply h-input rounded-lg bg-input px-6;
 
     min-width: 225px;
 

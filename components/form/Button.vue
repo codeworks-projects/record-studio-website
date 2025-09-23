@@ -10,6 +10,7 @@
       loading,
       primary: type === 'primary',
       secondary: type === 'secondary',
+      bordered: type === 'bordered',
       disabled,
       'ico-only': value === undefined,
       'fill-width': aspect === 'fill',
@@ -22,7 +23,7 @@
       </div>
     </div>
     {{ value }}
-    <span v-if="type === 'primary'" class="pl-2">
+    <span v-if="type === 'primary' || type === 'bordered'" class="pl-2">
       <Icon name="freccia" />
     </span>
     <Loader
@@ -36,7 +37,7 @@
 <script lang="ts" setup>
 import { SLIDE_UP, TRANSITION } from '~/animations.config.json'
 
-export type ButtonType = 'primary' | 'secondary'
+export type ButtonType = 'primary' | 'secondary' | 'bordered'
 
 type Props = {
   value?: string
@@ -97,6 +98,10 @@ const iconType = computed(() => (props.type === 'primary' ? 'primary' : 'seconda
 
   &.secondary {
     @apply bg-white text-black;
+  }
+
+  &.bordered {
+    @apply text-white !border-[1px] border-white rounded-md uppercase !font-medium bg-transparent;
   }
 
   &.ico-only {

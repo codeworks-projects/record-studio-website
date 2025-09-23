@@ -15,6 +15,6 @@ withDefaults(defineProps<Props>(), {
 
 <style lang="postcss" scoped>
 label {
-  @apply block text-sm text-black font-semibold mb-1;
+  @apply flex  text-white uppercase font-bold;
 }
 </style>

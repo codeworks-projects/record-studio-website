@@ -1,4 +1,12 @@
 {
+  "request": {
+    "success": "Your message has been sent successfully.",
+    "error": "An error occurred during the request.",
+    "acceptPrivacy": "Please accept the privacy policy.",
+    "incompleteForm": "Please fill out all required fields.",
+    "invalidEmail": "Please enter a valid email address.",
+    "invalidPhone": "Please enter a valid phone number."
+  },
   "common": {
     "vat": "VAT",
     "sdi": "SDI",
@@ -138,7 +146,13 @@
         }
       },
       "contact": {
-        "title": "Contattaci"
+        "title": "Contattaci",
+        "email": "Email referente",
+        "phone": "Telefono referente",
+        "referentName": "Nome referente",
+        "businessName": "Nome azienda",
+        "privacy": "Ho letto e accettato la -privacy-Privacy Policy-privacy-",
+        "cta": "Invia"
       }
     },
     "privacy": {

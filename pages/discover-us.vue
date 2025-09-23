@@ -12,18 +12,18 @@
           :transition="TRANSITION.DEFAULT"
         >
           <h1
-            class="uppercase font-title max-md:text-4xl text-8xl __text-gradient"
+            class="uppercase font-title max-md:text-4xl text-7xl __text-gradient"
             v-html="$md($t('pg.discover-us.title'))"
           />
         </Motion>
-        <div class="max-md:flex-col max-md:gap-6 flex gap-14 !leading-none font-title opacity-90">
+        <div class="max-md:gap-6 flex gap-14 !leading-none font-title opacity-90">
           <Motion
             :initial="SLIDE_UP.INITIAL"
             :in-view="SLIDE_UP.IN_VIEW"
             :transition="{ ...TRANSITION.DEFAULT, delay: index * 0.1 }"
             v-for="(claim, index) in claims"
           >
-            <p class="max-md:!max-w-none !max-w-[200px] !font-extrabold max-md:text-base text-xl">
+            <p class="md:!max-w-[200px] !font-extrabold text-xs md:text-xl">
               {{ claim }}
             </p>
           </Motion>
@@ -34,7 +34,7 @@
         </NuxtLink>
       </div>
 
-      <div class="relative z-10 max-md:pt-20 pt-40 __center">
+      <div class="relative z-10 pt-40 __center">
         <Video
           class="size-full rounded-lg"
           autoplay
@@ -48,11 +48,11 @@
         <Image src="/image/discover-us/hero2.webp" class="size-full object-contain object-top" />
       </div>
 
-      <div class="relative z-10 pt-4 flex flex-col max-md:gap-16 gap-28 __center">
+      <div class="relative z-10 pt-4 flex flex-col gap-40 __center">
         <section class="max-md:grid-cols-1 grid grid-cols-3 gap-4">
           <Motion
             tag="div"
-            class="bg-[#0d0d0d] h-full rounded-lg max-md:p-6 p-8 flex flex-col max-md:gap-6 gap-10 justify-between"
+            class="bg-[#0d0d0d] h-full rounded-lg max-md:p-6 p-8 flex flex-col max-md:gap-6 gap-10"
             :initial="SLIDE_UP.INITIAL"
             :in-view="SLIDE_UP.IN_VIEW"
             :transition="{ ...TRANSITION.DEFAULT, delay: index * 0.1 }"
@@ -126,29 +126,45 @@
             :transition="TRANSITION.DEFAULT"
           >
             <div class="max-md:grid-cols-1 grid grid-cols-2 gap-4 mb-10">
-              <div
-                class="rounded-lg gap-8 p-6 flex flex-col bg-white/20 backdrop-blur-sm justify-between"
+              <Motion
+                tag="div"
+                :initial="SLIDE_UP.INITIAL"
+                :in-view="SLIDE_UP.IN_VIEW"
+                :transition="TRANSITION.DEFAULT"
+                class="rounded-lg gap-8 p-6 flex flex-col bg-[#292929]/90 backdrop-blur-sm justify-between"
               >
                 <p class="font-title max-md:text-lg text-2xl font-semibold max-w-[250px]">
                   {{ $t('pg.discover-us.grid2.card1.title') }}
                 </p>
                 <p class="__paragraph">{{ $t('pg.discover-us.grid2.card1.description') }}</p>
-              </div>
-              <div
-                class="rounded-lg gap-8 p-6 flex flex-col bg-white/20 backdrop-blur-sm justify-between"
+              </Motion>
+              <Motion
+                tag="div"
+                :initial="SLIDE_UP.INITIAL"
+                :in-view="SLIDE_UP.IN_VIEW"
+                :transition="{ ...TRANSITION.DEFAULT, delay: 0.1 }"
+                class="rounded-lg gap-8 p-6 flex flex-col bg-[#292929]/90 backdrop-blur-sm justify-between"
               >
                 <p class="font-title max-md:text-lg text-2xl font-semibold max-w-[250px]">
                   {{ $t('pg.discover-us.grid2.card2.title') }}
                 </p>
                 <p class="__paragraph">{{ $t('pg.discover-us.grid2.card2.description') }}</p>
-              </div>
+              </Motion>
             </div>
-            <p class="font-title max-md:text-xl text-4xl font-semibold max-w-[500px]">
-              {{ $t('pg.discover-us.grid2.subtitle') }}
-            </p>
-            <p class="__paragraph max-w-[700px]">
-              {{ $t('pg.discover-us.grid2.description') }}
-            </p>
+            <Motion
+              tag="div"
+              class="flex flex-col max-md:gap-6 gap-10"
+              :initial="SLIDE_UP.INITIAL"
+              :in-view="SLIDE_UP.IN_VIEW"
+              :transition="TRANSITION.DEFAULT"
+            >
+              <p class="font-title max-md:text-xl text-3xl font-semibold max-w-[500px]">
+                {{ $t('pg.discover-us.grid2.subtitle') }}
+              </p>
+              <p class="__paragraph max-w-[700px]">
+                {{ $t('pg.discover-us.grid2.description') }}
+              </p>
+            </Motion>
           </Motion>
         </section>
         <section class="flex flex-col max-md:gap-6 gap-10">
@@ -161,9 +177,16 @@
           >
             <h2>{{ $t('pg.discover-us.grid3.title') }}</h2>
           </Motion>
-          <p class="__paragraph opacity-80 max-w-[550px]">
-            {{ t('pg.discover-us.grid3.description') }}
-          </p>
+
+          <Motion
+            :initial="SLIDE_UP.INITIAL"
+            :in-view="SLIDE_UP.IN_VIEW"
+            :transition="TRANSITION.DEFAULT"
+          >
+            <p class="__paragraph opacity-80 max-w-[550px]">
+              {{ t('pg.discover-us.grid3.description') }}
+            </p>
+          </Motion>
           <div class="max-md:grid-cols-2 grid grid-cols-4 gap-4">
             <Motion
               v-for="(work, i) in works"
@@ -179,7 +202,7 @@
       </div>
     </div>
 
-    <section class="flex flex-col max-md:gap-6 gap-10 __center max-md:pt-20 pt-40">
+    <section class="flex flex-col max-md:gap-6 gap-10 __center pt-40">
       <Motion
         tag="div"
         class="font-title font-semibold max-md:text-2xl text-4xl uppercase max-w-[400px]"
@@ -189,9 +212,15 @@
       >
         <h2>{{ $t('pg.discover-us.brands.title') }}</h2>
       </Motion>
-      <p class="__paragraph opacity-80 max-w-[550px]">
-        {{ t('pg.discover-us.brands.description') }}
-      </p>
+      <Motion
+        :initial="SLIDE_UP.INITIAL"
+        :in-view="SLIDE_UP.IN_VIEW"
+        :transition="TRANSITION.DEFAULT"
+      >
+        <p class="__paragraph opacity-80 max-w-[550px]">
+          {{ t('pg.discover-us.brands.description') }}
+        </p>
+      </Motion>
       <div class="max-md:grid-cols-2 grid grid-cols-4 gap-4">
         <Motion
           v-for="(brand, i) in brands"
@@ -213,7 +242,7 @@
       </NuxtLink>
     </section>
 
-    <section class="max-md:pt-20 pt-40 flex flex-col gap-4 __center">
+    <section class="pt-40 flex flex-col gap-4 __center">
       <div
         class="max-md:flex-col max-md:items-start max-md:gap-8 flex items-center justify-between"
       >
@@ -266,7 +295,7 @@
       </Motion>
     </section>
 
-    <section class="flex flex-col max-md:gap-6 gap-10 __center max-md:pt-20 pt-40">
+    <section class="flex flex-col max-md:gap-6 gap-10 __center pt-40">
       <Motion
         tag="div"
         class="font-title font-semibold max-md:text-2xl text-4xl uppercase flex flex-col"
@@ -277,9 +306,16 @@
         <h2>{{ $t('pg.discover-us.availability.title') }}</h2>
         <p class="max-md:text-lg text-2xl">{{ $t('pg.discover-us.availability.subtitle') }}</p>
       </Motion>
-      <p class="__paragraph opacity-80 max-w-[550px]">
-        {{ t('pg.discover-us.availability.description') }}
-      </p>
+
+      <Motion
+        :initial="SLIDE_UP.INITIAL"
+        :in-view="SLIDE_UP.IN_VIEW"
+        :transition="TRANSITION.DEFAULT"
+      >
+        <p class="__paragraph opacity-80 max-w-[550px]">
+          {{ t('pg.discover-us.availability.description') }}
+        </p>
+      </Motion>
       <div class="max-md:grid-cols-1 grid grid-cols-4 gap-4">
         <Motion
           tag="div"
@@ -291,7 +327,7 @@
         >
           <div class="flex flex-col">
             <p class="uppercase __paragraph">{{ $t('pg.discover-us.availability.month') }}</p>
-            <p class="max-md:text-3xl text-5xl font-title uppercase font-semibold">
+            <p class="max-md:text-3xl text-4xl font-title uppercase font-semibold">
               {{ availability[`month${item}Name`] }}
             </p>
           </div>
@@ -301,18 +337,20 @@
           <p class="font-medium uppercase max-md:text-base text-xl max-w-[150px]">
             {{ $t('pg.discover-us.availability.availableSlots') }}
           </p>
-          <p class="uppercase __paragraph underline">
-            {{ $t('pg.discover-us.availability.lock') }}
-          </p>
+          <NuxtLink to="#contact" class="clickable">
+            <p class="uppercase __paragraph underline">
+              {{ $t('pg.discover-us.availability.lock') }}
+            </p>
+          </NuxtLink>
         </Motion>
       </div>
 
-      <NuxtLink to="#contact" class="w-fit ml-auto">
+      <NuxtLink to="#contact" class="w-fit md:ml-auto">
         <Button :value="$t('pg.discover-us.cta')" />
       </NuxtLink>
     </section>
 
-    <section class="max-md:grid-cols-1 max-md:gap-8 grid grid-cols-2 __center max-md:pt-20 pt-40">
+    <section class="max-md:grid-cols-1 max-md:gap-8 grid grid-cols-2 __center pt-40">
       <div class="flex flex-col max-md:gap-8 gap-14">
         <Motion
           tag="div"
@@ -355,15 +393,38 @@
         :transition="TRANSITION.DEFAULT"
         class="flex justify-center"
       >
-        <h2 class="uppercase font-title max-md:text-[120px] text-[280px] __text-gradient-2">
+        <h2 class="uppercase font-title max-md:text-[75px] text-[280px] __text-gradient-2">
           {{ $t('pg.discover-us.contact.title') }}
         </h2>
       </Motion>
 
       <div
-        class="__center max-md:mt-[-60px] mt-[-210px] rounded-lg gap-8 max-md:p-4 p-6 flex flex-col bg-white/20 backdrop-blur-sm justify-between"
+        class="__center border-[0.5px] border-white/30 max-md:mt-[-45px] mt-[-210px] rounded-lg max-md:p-4 p-8 flex flex-col bg-[#292929]/90 backdrop-blur-sm justify-between gap-12"
       >
-        form
+        <div class="grid grid-cols-1 md:grid-cols-2 max-md:gap-8 gap-16">
+          <TextInput
+            aspect="fill"
+            :label="$t('pg.discover-us.contact.businessName')"
+            v-model="businessName"
+          />
+          <TextInput
+            aspect="fill"
+            :label="$t('pg.discover-us.contact.referentName')"
+            v-model="referentName"
+          />
+          <TextInput aspect="fill" :label="$t('pg.discover-us.contact.email')" v-model="email" />
+          <TextInput aspect="fill" :label="$t('pg.discover-us.contact.phone')" v-model="phone" />
+        </div>
+
+        <Checkbox v-model="accepted" :label="$md($t('pg.discover-us.contact.privacy'))" />
+
+        <Button
+          class="w-fit"
+          type="bordered"
+          :value="$t('pg.discover-us.contact.cta')"
+          :animated="false"
+          @click="submit"
+        />
       </div>
     </section>
   </main>
@@ -377,6 +438,11 @@ const config = useRuntimeConfig()
 const { t } = useI18n()
 
 const openedQA = ref<number | null>(null)
+const email = ref<string>()
+const phone = ref<string>()
+const referentName = ref<string>()
+const businessName = ref<string>()
+const accepted = ref<boolean>(false)
 
 const claims = computed(() => [
   t('pg.discover-us.claim1'),
@@ -470,6 +536,44 @@ const { data: wd } = await useFetch(
 const works = computed(() => {
   return (wd.value as any)?.data as Work[]
 })
+
+const submit = async () => {
+  if (!email.value || !phone.value || !referentName.value || !businessName.value) {
+    notifyError(t('request.incompleteForm'))
+    return
+  }
+
+  if (typeof isEmail(email.value) === 'string') {
+    notifyError(t('request.invalidEmail'))
+    return
+  }
+
+  if (typeof isPhone(phone.value) === 'string') {
+    notifyError(t('request.invalidPhone'))
+    return
+  }
+
+  if (!accepted.value) {
+    notifyError(t('request.acceptPrivacy'))
+    return
+  }
+
+  try {
+    await $fetch('/form', {
+      method: 'POST',
+      body: {
+        businessName: businessName.value,
+        referentName: referentName.value,
+        email: email.value,
+        phone: phone.value,
+      },
+    })
+    notifySuccess(t('request.success'))
+  } catch (error) {
+    notifyError(t('request.error'))
+    return
+  }
+}
 
 useHead({
   title: t('contacts.companySimpleName') + ' | ' + t('pg.discover-us.meta.title'),

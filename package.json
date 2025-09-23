@@ -41,6 +41,7 @@
     "autoprefixer": "^10.4.13",
     "date-fns": "^2.29.3",
     "dotenv-expand": "^10.0.0",
+    "aws-sdk": "^2.1183.0",
     "embla-carousel-autoplay": "^8.0.0-rc22",
     "embla-carousel-vue": "^8.0.0-rc22",
     "gsap": "^3.12.5",
