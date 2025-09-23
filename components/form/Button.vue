@@ -22,6 +22,9 @@
       </div>
     </div>
     {{ value }}
+    <span v-if="type === 'primary'" class="pl-2">
+      <Icon name="freccia" />
+    </span>
     <Loader
       v-if="loading"
       class="loader-ct"
@@ -59,7 +62,7 @@ const iconType = computed(() => (props.type === 'primary' ? 'primary' : 'seconda
 
 <style lang="postcss" scoped>
 .button {
-  @apply relative h-input inline-block px-6 text-base font-bold select-none;
+  @apply relative  min-h-[40px] inline-block px-6 text-base font-bold select-none !leading-none py-2;
 
   min-width: 50px;
   line-height: 42px;
@@ -84,7 +87,8 @@ const iconType = computed(() => (props.type === 'primary' ? 'primary' : 'seconda
   }
 
   &.primary {
-    @apply bg-white text-black;
+    @apply text-white rounded-md uppercase !font-medium;
+    background: radial-gradient(ellipse 100% 80px at center 60px, white 0%, black 70%);
 
     /* &:hover {
       @apply bg-white/80;
@@ -92,19 +96,7 @@ const iconType = computed(() => (props.type === 'primary' ? 'primary' : 'seconda
   }
 
   &.secondary {
-    @apply bg-secondary text-black;
-
-    &:hover {
-      @apply bg-secondary-hover;
-    }
-
-    & .svg-ct {
-      & .inner {
-        & > svg {
-          fill: theme(colors.black);
-        }
-      }
-    }
+    @apply bg-white text-black;
   }
 
   &.ico-only {

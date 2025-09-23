@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <NuxtLink class="icon-ct clickable" :class="{ 'menu-open': showMenu }" :to="localePath('/')">
-      <Icon name="logo-icon" />
+      <Icon name="logotype" class="max-md:!w-44" />
     </NuxtLink>
     <nav class="menu-ct" ref="menuRef">
       <div
@@ -31,7 +31,12 @@
           target="_blank"
           title="contact-us"
         >
-          <Button :animated="false" :value="$t('common.letsTalk')" class="header-btn-btn" />
+          <Button
+            :animated="false"
+            type="secondary"
+            :value="$t('common.letsTalk')"
+            class="header-btn-btn"
+          />
         </a>
       </ul>
     </nav>

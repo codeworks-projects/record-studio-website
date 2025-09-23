@@ -1,6 +1,6 @@
 <template>
   <main class="main">
-    <div class="center terms-ct">
+    <div class="__center terms-ct">
       <div v-if="locale === 'en'">
         <h1>Privacy and Cookie Policy</h1>
 

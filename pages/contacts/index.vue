@@ -1,6 +1,6 @@
 <template>
   <main class="main">
-    <section id="contacts" class="contacts-section center">
+    <section id="contacts" class="contacts-section __center">
       <H tag="h1" class="contacts-title">{{ $t('pg.contacts.title') }}</H>
       <div class="contacts-ct">
         <Motion

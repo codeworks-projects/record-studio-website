@@ -10,6 +10,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "release": "standard-version",
+    "convert-webp": "cd ./public/image && bash ../../script/convert-webp.sh",
     "release-development": "bash ./script/release-development.sh",
     "release-stage": "bash ./script/release-stage.sh",
     "release-production": "bash ./script/release-production.sh"
@@ -31,6 +32,7 @@
     "vue-template-compiler": "^2.7.14"
   },
   "dependencies": {
+    "markdown-it": "^14.1.0",
     "@formkit/auto-animate": "^0.8.1",
     "@kyvg/vue3-notification": "^2.9.0",
     "@nuxtjs/plausible": "^1.2.0",
@@ -48,6 +50,7 @@
     "vite-svg-loader": "^4.0.0",
     "vue-advanced-cropper": "^2.8.8",
     "vue3-apexcharts": "^1.5.2",
+    "@types/markdown-it": "^14.1.2",
     "vue3-marquee": "^4.2.0-beta.1"
   }
 }

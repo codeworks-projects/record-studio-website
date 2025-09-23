@@ -5,7 +5,7 @@
         :video-url="work?.attributes?.previewVideo?.data?.attributes?.url"
         :image-url="work?.attributes?.previewImage?.data?.attributes?.url"
       />
-      <div class="work-hero-title-ct center">
+      <div class="work-hero-title-ct __center">
         <H tag="h2" v-if="work?.attributes.title" class="hero-title">
           {{ work?.attributes.title }}
         </H>
@@ -15,7 +15,7 @@
       </div>
     </section>
 
-    <section id="dynamic" class="dynamic-section center">
+    <section id="dynamic" class="dynamic-section __center">
       <template v-for="item in work?.attributes.dynamic">
         <TextDynamic
           v-if="item.__component === 'work-dynamic.text'"

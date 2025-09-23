@@ -39,6 +39,108 @@
       "title1": "CREATIVE MULTIMEDIA",
       "title2": "& ADVERTISING STUDIO"
     },
+    "discover-us": {
+      "meta": {
+        "title": "Progettare, Catturare e Raccontare Emozioni",
+        "description": "I brand migliori non si presentano, si fanno ricordare."
+      },
+      "title": "I brand migliori-br-non si presentano,-br-si fanno ricordare.",
+      "claim1": "Video pensati per lasciare il segno",
+      "claim2": "Approccio strategico, non solo estetico",
+      "claim3": "Esperienza visiva che parla al tuo pubblico",
+      "cta": "Prenota una call conoscitiva",
+      "card1": {
+        "title": "Analizziamo il tuo brand, non solo il brief",
+        "description": "Prima di accendere una telecamera, ascoltiamo. Approfondiamo chi sei, cosa fai, a chi parli e cosa vuoi ottenere dal video. Ogni progetto parte da un confronto strategico: studiamo il tono di voce, il posizionamento e il contesto in cui il video andrà a vivere (online, in evento, per campagne, ecc.). Il risultato? Un’idea visiva che nasce su misura per il tuo business. Non da un format."
+      },
+      "card2": {
+        "title": "Progettiamo un’idea visiva che parla per te",
+        "description": "Dall’ideazione alla scrittura, dalla regia al montaggio: ogni fase è sviluppata internamente dal nostro team. Costruiamo una narrazione coerente con la tua identità, curiamo ritmo, inquadrature, luci e suono per creare un’esperienza. Non ti diamo un video. Ti diamo un messaggio che resta impresso."
+      },
+      "card3": {
+        "title": "Ti coinvolgiamo nel processo, senza complicarti la vita",
+        "description": "Sarai parte attiva, ma senza stress. Condividiamo con te lo storyboard, lo stile visivo e il tono narrativo, in modo che ogni dettaglio sia approvato e rifinito assieme. Hai sempre visione chiara su tempi, fasi, obiettivi e possibilità di revisione. Un lavoro fatto bene si vede. Ma prima ancora, si capisce."
+      },
+      "grid1": {
+        "title": "PERCHÉ SCEGLIERE RECORD STUDIO",
+        "subtitle": "Non realizziamo semplici video. Costruiamo visioni che funzionano.",
+        "description": "Siamo un team specializzato in produzioni video ad alto impatto visivo, pensate per valorizzare brand, prodotti ed esperienze. Ogni progetto nasce da un’idea originale, si sviluppa con cura cinematografica e si rifinisce con precisione artigianale."
+      },
+      "grid2": {
+        "title": "A CHI È RIVOLTO QUESTO SERVIZIO",
+        "subtitle": "NON È PENSATO PER CHI CERCA UN VIDEO QUALUNQUE DA METTERE ONLINE",
+        "description": "È un servizio pensato per chi dà valore alla propria immagine, alla qualità percepita e al modo in cui il proprio brand viene raccontato.",
+        "card1": {
+          "title": "Brand e aziende strutturate",
+          "description": "Che vogliono distinguersi con video che raccontano identità, visione e valori. Cercano un partner creativo capace di trasformare un messaggio in un’esperienza visiva memorabile, non un esecutore tecnico"
+        },
+        "card2": {
+          "title": "Startup e realtà in fase di posizionamento",
+          "description": "Che sanno quanto conta il primo impatto e vogliono un video che li rappresenti in modo autorevole, moderno e strategico. Un contenuto capace di parlare a investitori, clienti e stakeholder fin dal primo secondo."
+        }
+      },
+      "grid3": {
+        "title": "I nostri lavori, la tua ispirazione",
+        "description": "Abbiamo collaborato con brand iconici e realtà d’eccellenza, realizzando video che combinano estetica d’autore, storytelling efficace e impatto visivo."
+      },
+      "brands": {
+        "title": "I brand con cui abbiamo lavorato",
+        "description": "Ecco alcune delle realtà premium che hanno scelto Record Studio"
+      },
+      "us": {
+        "title": "Noi siamo pronti",
+        "subtitle": "Siamo creativi, tecnici, registi, montatori.",
+        "description": "Ma prima ancora, siamo un team che ama creare immagini che restano. Ogni progetto che accettiamo è una responsabilità che viviamo fino in fondo, perché sappiamo che un video può cambiare la percezione di un brand, di un prodotto, di un’identità.",
+        "subtitle2": "Questo è il nostro lavoro.",
+        "description2": "Fare in modo che il tuo brand-br-non venga solo visto, ma ricordato."
+      },
+      "availability": {
+        "title": "Disponibilità progetti",
+        "subtitle": "Prenota il tuo slot",
+        "description": "Accettiamo solo un numero limitato di progetti ogni mese, per garantirti attenzione, qualità e un risultato all’altezza.",
+        "month": "Mese",
+        "availableSlots": "Progetti disponibili",
+        "lock": "bloccalo"
+      },
+      "qa": {
+        "title": "Hai ancora qualche dubbio?",
+        "qa1": {
+          "title": "Posso chiedervi un video anche se ho già un’idea o uno script?",
+          "description": "Certo. Possiamo partire da un concept già esistente e aiutarti a raffinarlo, oppure (se necessario) proporre una rielaborazione completa. In ogni caso, analizziamo insieme la coerenza strategica e visiva prima di entrare in produzione."
+        },
+        "qa2": {
+          "title": "L’analisi preliminare del progetto è gratuita?",
+          "description": "Sì. La prima call conoscitiva è gratuita e serve a capire se siamo il partner giusto per te (e viceversa). Dopo questa fase, se decidi di affidarci il progetto, elaboriamo una proposta personalizzata."
+        },
+        "qa3": {
+          "title": "Quanto tempo serve per realizzare un video?",
+          "description": "Dipende dalla complessità del progetto, ma indicativamente tra le 4 e le 8 settimane dal momento della conferma. Tempistiche più brevi o più lunghe vengono definite in fase di proposta, in base a script, location, riprese e post-produzione."
+        },
+        "qa4": {
+          "title": "Posso chiedere modifiche dopo la prima versione?",
+          "description": "Sì. La nostra offerta include un numero di revisioni concordato in partenza, con l’obiettivo di ottenere un risultato condiviso. Richieste successive alla versione definitiva saranno valutate separatamente."
+        },
+        "qa5": {
+          "title": "Realizzate anche video destinati all’estero?",
+          "description": "Sì. Se ci indichi fin dall’inizio target e mercati internazionali, possiamo produrre contenuti in lingua, con sottotitoli, adattamenti o voice-over multilingua."
+        },
+        "qa6": {
+          "title": "Posso chiedere più video nello stesso progetto?",
+          "description": "Certo. Realizziamo pacchetti personalizzati, anche con contenuti derivati (es. short verticali, trailer, teaser, backstage). Possiamo costruire insieme il format più adatto alle tue necessità!"
+        },
+        "qa7": {
+          "title": "Possiamo lavorare anche a distanza?",
+          "description": "Sì. Molti nostri clienti non sono in Veneto, e alcuni nemmeno in Italia! Organizziamo tutto con call, pre-produzione condivisa, approvazioni online e invio dei materiali. Le riprese si svolgeranno nelle location selezionate insieme."
+        },
+        "qa8": {
+          "title": "Quali sono le modalità di pagamento?",
+          "description": "Al momento della conferma del progetto viene richiesto un acconto, con saldo alla consegna o secondo le scadenze definite nel preventivo. I pagamenti avvengono tramite bonifico bancario. Viene sempre emessa regolare fattura."
+        }
+      },
+      "contact": {
+        "title": "Contattaci"
+      }
+    },
     "privacy": {
       "meta": {
         "title": "Privacy & Cookie Policy",

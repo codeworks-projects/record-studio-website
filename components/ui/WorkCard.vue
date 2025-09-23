@@ -9,11 +9,19 @@
       rounded
     />
     <div class="work-card-text-ct">
-      <H :animated="false" v-if="work?.attributes.title" tag="h5" class="video-title">{{
-        work?.attributes.title
-      }}</H>
-      <P :animated="false" v-if="work?.attributes.category" class="video-subtitle">
+      <H
+        :animated="false"
+        v-if="work?.attributes.title"
+        tag="h5"
+        class="video-title !font-semibold"
+      >
+        {{ work?.attributes.title }}
+      </H>
+      <P :animated="false" v-if="!copy && work?.attributes.category" class="video-subtitle">
         {{ $t(`enum.work.${work?.attributes.category}`) }}
+      </P>
+      <P :animated="false" v-if="copy && work?.attributes.copy" class="video-copy">
+        {{ work?.attributes.copy }}
       </P>
     </div>
   </NuxtLink>
@@ -24,6 +32,7 @@ import type { Work } from '~/types/work'
 
 type Props = {
   work: Work
+  copy?: boolean
 }
 
 const localePath = useLocalePath()
@@ -44,6 +53,10 @@ const props = withDefaults(defineProps<Props>(), {})
 
     & .video-subtitle {
       @apply text-dark-opacity pt-2;
+    }
+
+    & .video-copy {
+      @apply opacity-80 pt-4 line-clamp-2;
     }
   }
 }
