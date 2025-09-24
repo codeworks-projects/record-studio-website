@@ -87,6 +87,8 @@ export default defineNuxtConfig({
   // },
 
   runtimeConfig: {
+    awsAccessKeyId: '',
+    awsSecretAccessKey: '',
     public: {
       strapiUrl: '',
       strapiImagePath: '',
