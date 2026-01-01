@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     '@formkit/auto-animate/nuxt',
     '@nuxt/image',
     '@oku-ui/motion-nuxt',
-    '@nuxtjs/plausible',
+    'nuxt-umami',
   ],
   // devtools: {
   //   enabled: true,
@@ -139,9 +139,18 @@ export default defineNuxtConfig({
     transpile: ['tslib'],
   },
 
-  plausible: {
-    // Prevent tracking on localhost
-    ignoredHostnames: ['localhost'],
+  umami: {
+    id: 'afdf54bc-79d8-4c94-9a1f-6c18d5d93401',
+    host: 'https://analytics.codeworks.build',
+    autoTrack: true,
+    // proxy: 'cloak',
+    // useDirective: true,
+    ignoreLocalhost: true,
+    // excludeQueryParams: false,
+    // domains: ['cool-site.app', 'my-space.site'],
+    // customEndpoint: '/my-custom-endpoint',
+    // enabled: false,
+    // logErrors: true,
   },
 
   telemetry: false,
