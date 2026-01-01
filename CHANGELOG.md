@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.17.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.16.1...v1.17.0) (2026-01-01)
+
+
+### Features
+
+* migrated to Umami ([7beee36](https://github.com/codeworks-projects/record-studio-website/commit/7beee364f561d7e589ea5053765f293805b243ef))
+
 ### [1.16.1](https://github.com/codeworks-projects/record-studio-website/compare/v1.16.0...v1.16.1) (2025-09-24)
 
 ## [1.16.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.15.0...v1.16.0) (2025-09-24)
