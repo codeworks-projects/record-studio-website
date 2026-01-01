@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.17.1](https://github.com/codeworks-projects/record-studio-website/compare/v1.17.0...v1.17.1) (2026-01-01)
+
+
+### Bug Fixes
+
+* upgraded to Node 22 ([f2afb99](https://github.com/codeworks-projects/record-studio-website/commit/f2afb99bbdcf095c88d9da5d6675b23039234211))
+
 ## [1.17.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.16.1...v1.17.0) (2026-01-01)
 
 
