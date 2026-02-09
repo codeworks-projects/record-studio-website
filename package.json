@@ -45,6 +45,7 @@
     "embla-carousel-vue": "^8.0.0-rc22",
     "gsap": "^3.12.5",
     "markdown-it": "^14.1.0",
+    "nuxt-marquee": "^1.0.4",
     "nuxt-umami": "^3.2.1",
     "postcss": "^8.4.19",
     "standard-version": "^9.5.0",

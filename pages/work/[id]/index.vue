@@ -52,7 +52,11 @@
           v-if="item.__component === 'work-dynamic.youtube'"
           :youtubeID="item.youtubeID"
         />
-        <VimeoDynamic v-if="item.__component === 'work-dynamic.vimeo'" :vimeoID="item.vimeoID" />
+        <VimeoDynamic v-if="item.__component === 'work-dynamic.vimeo'" :vimeoID="item.vimeoId" />
+        <VimeoGallery
+          v-if="item.__component === 'work-dynamic.vimeo-gallery'"
+          :videos="item.videos"
+        />
       </template>
     </section>
   </main>

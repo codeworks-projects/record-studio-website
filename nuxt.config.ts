@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@oku-ui/motion-nuxt',
     'nuxt-umami',
+    'nuxt-marquee',
   ],
   // devtools: {
   //   enabled: true,

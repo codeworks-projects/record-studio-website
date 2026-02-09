@@ -33,7 +33,14 @@ type VideoComponent = {
 }
 type VimeoComponent = {
   __component: 'work-dynamic.vimeo'
-  vimeoID?: string
+  vimeoId?: string
+}
+type GalleryVideo = {
+  vimeoId: string
+}
+type VimeoGalleryComponent = {
+  __component: 'work-dynamic.vimeo-gallery'
+  videos?: GalleryVideo[]
 }
 type YoutubeComponent = {
   __component: 'work-dynamic.youtube'
@@ -48,6 +55,7 @@ type DynamicComponent =
   | TextComponent
   | VideoComponent
   | VimeoComponent
+  | VimeoGalleryComponent
   | YoutubeComponent
 
 type HeroVideo = {
