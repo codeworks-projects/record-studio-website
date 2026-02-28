@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.18.0](https://github.com/codeworks-projects/record-studio-website/compare/v1.17.2...v1.18.0) (2026-02-28)
+
+
+### Features
+
+* improved marquee ([ee08a44](https://github.com/codeworks-projects/record-studio-website/commit/ee08a4478268caa9e62bee2d0ffc4de9a600fdc9))
+
 ### [1.17.2](https://github.com/codeworks-projects/record-studio-website/compare/v1.17.1...v1.17.2) (2026-02-09)
 
 ### [1.17.1](https://github.com/codeworks-projects/record-studio-website/compare/v1.17.0...v1.17.1) (2026-01-01)
